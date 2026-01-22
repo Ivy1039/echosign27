@@ -7,7 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Nunito:wght@400;600;700&display=swap');
+        /* 新增 Pacifico 字體用於 Header Logo */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Nunito:wght@400;600;700&family=Pacifico&display=swap');
         
         body {
             font-family: 'Noto Sans TC', 'Nunito', sans-serif;
@@ -35,15 +36,6 @@
             background: linear-gradient(90deg, #FF707A 0%, #FF9EA3 100%);
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(255, 140, 148, 0.3);
-        }
-
-        .project-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
         .blob {
@@ -89,7 +81,7 @@
                         <a href="#donate" class="gradient-btn text-white px-8 py-4 rounded-full text-lg font-medium shadow-lg text-center">
                             <span data-i18n="hero_cta_primary">加入我們</span>
                         </a>
-                        <a href="#projects" class="px-8 py-4 rounded-full text-lg font-medium text-gray-600 bg-white border border-gray-200 hover:border-rose-300 hover:text-rose-500 transition-all shadow-sm text-center">
+                        <a href="programs.html" class="px-8 py-4 rounded-full text-lg font-medium text-gray-600 bg-white border border-gray-200 hover:border-rose-300 hover:text-rose-500 transition-all shadow-sm text-center">
                             <span data-i18n="hero_cta_secondary">了解專案</span>
                         </a>
                     </div>
@@ -98,14 +90,12 @@
                 <div class="relative lg:h-[600px] w-full flex items-center justify-center">
                     <div class="relative w-full max-w-lg aspect-square">
                         <div class="absolute inset-0 bg-white rounded-[3rem] shadow-2xl overflow-hidden transform rotate-3 transition-transform hover:rotate-0 duration-700">
-                            <!-- 已更新：老闆的照片 (Hero Image) -->
                             <div class="w-full h-full bg-gray-100 flex items-center justify-center relative overflow-hidden">
                                 <img src="https://duk.tw/iiiywC.jpg" alt="Megan Chen - Founder" class="object-cover w-full h-full opacity-90">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                             </div>
                         </div>
                         
-                        <!-- Floating Card Decoration -->
                         <div class="absolute -bottom-8 -left-8 bg-white p-4 rounded-2xl shadow-xl animate-bounce" style="animation-duration: 3s;">
                             <div class="flex items-center gap-3">
                                 <div class="bg-rose-100 p-2 rounded-full">
@@ -123,7 +113,6 @@
         </div>
     </section>
 
-    <!-- Impact Stats -->
     <section id="impact" class="py-20 bg-white shadow-inner relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -132,7 +121,6 @@
             </div>
             
             <div class="flex flex-wrap justify-center gap-8 lg:gap-12">
-                <!-- Item 1 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 p-6 bg-rose-50/50 rounded-2xl text-center hover:bg-rose-50 transition-colors">
                     <div class="w-12 h-12 mx-auto bg-rose-100 rounded-full flex items-center justify-center text-rose-500 mb-4">
                         <i data-lucide="users" class="w-6 h-6"></i>
@@ -140,7 +128,6 @@
                     <div class="text-4xl font-bold text-gray-800 mb-2">1,000+</div>
                     <div class="text-sm text-gray-600 font-medium" data-i18n="impact_1">接觸到的聽障人士</div>
                 </div>
-                <!-- Item 2 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 p-6 bg-orange-50/50 rounded-2xl text-center hover:bg-orange-50 transition-colors">
                     <div class="w-12 h-12 mx-auto bg-orange-100 rounded-full flex items-center justify-center text-orange-500 mb-4">
                         <i data-lucide="book" class="w-6 h-6"></i>
@@ -148,7 +135,6 @@
                     <div class="text-4xl font-bold text-gray-800 mb-2">800+</div>
                     <div class="text-sm text-gray-600 font-medium" data-i18n="impact_2">捐贈給聽障社群的書籍</div>
                 </div>
-                <!-- Item 3 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 p-6 bg-yellow-50/50 rounded-2xl text-center hover:bg-yellow-50 transition-colors">
                     <div class="w-12 h-12 mx-auto bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 mb-4">
                         <i data-lucide="dollar-sign" class="w-6 h-6"></i>
@@ -163,7 +149,6 @@
                     <div class="text-4xl font-bold text-gray-800 mb-2">6+</div>
                     <div class="text-sm text-gray-600 font-medium" data-i18n="impact_4">企業/組織合作夥伴</div>
                 </div>
-                <!-- Item 5 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 p-6 bg-purple-50/50 rounded-2xl text-center hover:bg-purple-50 transition-colors">
                     <div class="w-12 h-12 mx-auto bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mb-4">
                         <i data-lucide="layers" class="w-6 h-6"></i>
@@ -175,13 +160,11 @@
         </div>
     </section>
 
-    <!-- About Us -->
     <section id="about" class="py-24 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                 <div class="order-2 lg:order-1 relative sticky top-32">
                     <div class="absolute -top-4 -left-4 w-24 h-24 bg-yellow-200 rounded-full opacity-50 blur-xl"></div>
-                    <!-- 已更新：活動照片1 (About Us) -->
                     <img src="https://duk.tw/iZmxC6.jpg" alt="Team activity" class="relative rounded-3xl shadow-2xl w-full object-cover h-[500px]">
                     <div class="absolute -bottom-6 -right-6 bg-white px-6 py-4 rounded-xl shadow-lg border border-gray-100">
                         <p class="font-bold text-rose-500 text-lg">Since 2023</p>
@@ -206,60 +189,6 @@
         </div>
     </section>
 
-    <!-- Projects Grid -->
-    <section id="projects" class="py-24 bg-[#FFF5F5]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-rose-500 font-bold tracking-wider uppercase text-sm">Our Projects</span>
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mt-2" data-i18n="projects_title">我們如何傳遞愛</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
-                    <div class="h-64 overflow-hidden relative">
-                        <!-- 已更新：活動照片2 (Project 1) -->
-                        <img src="https://duk.tw/vPnlWj.jpg" alt="Sign Language Cards" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-rose-500">IG Hit</div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_1_title">手語圖卡計畫</h3>
-                        <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_1_desc">將日常詞彙轉化為精美圖卡，在社群媒體上引起迴響。</p>
-                        <a href="#" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
-                    <div class="h-64 overflow-hidden relative">
-                         <!-- 已更新：活動照片3 (Project 2) -->
-                        <img src="https://duk.tw/iRK2i8.jpg" alt="Storytelling" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_2_title">親子手語故事屋</h3>
-                        <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_2_desc">透過繪本共讀活動，讓聾聽孩童在故事中相遇。</p>
-                        <a href="#" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
-                    </div>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
-                    <div class="h-64 overflow-hidden relative">
-                         <!-- 已更新：活動照片4 (Project 3) -->
-                        <img src="https://duk.tw/lRmnVa.jpg" alt="International Sign Day" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-500">Event</div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_3_title">國際手語日倡議</h3>
-                        <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_3_desc">走入街頭與校園，結合快閃活動與展覽。</p>
-                        <a href="#" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Donate / Get Involved -->
     <section id="donate" class="py-24 bg-rose-50 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-64 h-64 bg-rose-100 rounded-full blur-3xl opacity-60 translate-x-1/2 -translate-y-1/2"></div>
 
@@ -304,10 +233,7 @@
                         作為台灣國際學校社群的一員，學生必須尋求實際的方法來理解並向在地文化學習，並透過盡己所能做出積極貢獻來建立更緊密的連結。</p>
                     <p>如今，EchoSign 持續成長，一步步縮減青少年與聽障社群之間的鴻溝，培養同理心，並透過每一個故事、每一場遊戲與每一次對話，創造實質的改變。</p>
                 `,
-                projects_title: "我們如何傳遞愛", proj_1_title: "手語圖卡計畫", proj_1_desc: "將日常詞彙轉化為精美圖卡，在社群媒體上引起迴響。",
-                proj_2_title: "親子手語故事屋", proj_2_desc: "透過繪本共讀活動，讓聾聽孩童在故事中相遇。",
-                proj_3_title: "國際手語日倡議", proj_3_desc: "走入街頭與校園，結合快閃活動與展覽。",
-                proj_link: "了解更多", donate_title: "成為共融推手，<br>讓改變發生", donate_desc: "您的每一筆支持，都將化為偏鄉學校的一本手語繪本。",
+                donate_title: "成為共融推手，<br>讓改變發生", donate_desc: "您的每一筆支持，都將化為偏鄉學校的一本手語繪本。",
                 donate_btn: "立即捐款支持"
             },
             en: {
@@ -339,23 +265,18 @@
                     <p>Today, EchoSign continues to grow, closing the divide between youth and the hearing impaired community, fostering empathy, and creating tangible 
                         change—one narrative, one game, and one conversation at a time.</p>
                 `,
-                projects_title: "How We Spread Love", proj_1_title: "Sign Language Flashcards", proj_1_desc: "Transforming daily vocabulary into beautiful flashcards.",
-                proj_2_title: "Storytelling Sessions", proj_2_desc: "Through picture book reading events, deaf and hearing children meet.",
-                proj_3_title: "Int'l Sign Day Initiative", proj_3_desc: "Walking into streets and campuses with flash mobs.",
-                proj_link: "Learn More", donate_title: "Become an Advocate,<br>Make Change Happen", donate_desc: "Your support turns into a sign language picture book.",
+                donate_title: "Become an Advocate,<br>Make Change Happen", donate_desc: "Your support turns into a sign language picture book.",
                 donate_btn: "Donate Now"
             }
         };
 
         let currentLang = 'zh';
 
-        // Initial Content Load
         function updateContent() {
             const elements = document.querySelectorAll('[data-i18n]');
             elements.forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[currentLang][key]) {
-                    // Add fade animation
                     el.classList.remove('fade-in');
                     void el.offsetWidth;
                     el.classList.add('fade-in');
@@ -363,7 +284,6 @@
                 }
             });
 
-            // Update About Content specifically (since it's HTML)
             const aboutContainer = document.getElementById('about-content');
             if (aboutContainer) {
                 aboutContainer.classList.remove('fade-in');
@@ -372,7 +292,6 @@
                 aboutContainer.innerHTML = translations[currentLang].about_content;
             }
 
-            // Update Body Class for Fonts
             document.body.className = currentLang === 'en' ? 'lang-en antialiased overflow-x-hidden' : 'lang-zh antialiased overflow-x-hidden';
             
             const langBtnText = document.getElementById('lang-btn-text');

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Sign 專案計畫 | Programs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 同樣引入 Pacifico 字體以支援 Header */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Nunito:wght@400;600;700&family=Pacifico&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', 'Nunito', sans-serif;
+            background-color: #FDFBF7;
+            color: #4A4A4A;
+        }
+
+        body.lang-en {
+            font-family: 'Nunito', 'Noto Sans TC', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #e1306c, #f77737);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gradient-btn {
+            background: linear-gradient(90deg, #FF8C94 0%, #FFB6B9 100%);
+            transition: all 0.3s ease;
+        }
+
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden lang-zh">
+
+    <div id="header-placeholder"></div>
+
+    <section class="pt-32 pb-12 bg-rose-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-rose-500 font-bold tracking-wider uppercase text-sm block mb-3">Our Projects</span>
+            <h1 class="text-4xl lg:text-5xl font-bold text-gray-800" data-i18n="projects_title">我們如何傳遞愛</h1>
+            <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto" data-i18n="projects_subtitle">
+                從手語教學到社群倡議，探索 Echo Sign 的核心計畫。
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-[#FFF5F5]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://duk.tw/vPnlWj.jpg" alt="Sign Language Cards" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-rose-500">IG Hit</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_1_title">手語圖卡計畫</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_1_desc">將日常詞彙轉化為精美圖卡，在社群媒體上引起迴響。</p>
+                        <a href="#" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://duk.tw/iRK2i8.jpg" alt="Storytelling" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_2_title">親子手語故事屋</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_2_desc">透過繪本共讀活動，讓聾聽孩童在故事中相遇。</p>
+                        <a href="#" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://duk.tw/lRmnVa.jpg" alt="International Sign Day" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-500">Event</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_3_title">國際手語日倡議</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_3_desc">走入街頭與校園，結合快閃活動與展覽。</p>
+                        <a href="#" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const translations = {
+            zh: {
+                nav_about: "關於我們", nav_projects: "專案計畫", nav_impact: "加入我們", nav_donate: "立即支持",
+                projects_title: "我們如何傳遞愛",
+                projects_subtitle: "從手語教學到社群倡議，探索 Echo Sign 的核心計畫。",
+                proj_1_title: "手語圖卡計畫", proj_1_desc: "將日常詞彙轉化為精美圖卡，在社群媒體上引起迴響。",
+                proj_2_title: "親子手語故事屋", proj_2_desc: "透過繪本共讀活動，讓聾聽孩童在故事中相遇。",
+                proj_3_title: "國際手語日倡議", proj_3_desc: "走入街頭與校園，結合快閃活動與展覽。",
+                proj_link: "了解更多"
+            },
+            en: {
+                nav_about: "About", nav_projects: "Programs", nav_impact: "Volunteer Today", nav_donate: "Donate",
+                projects_title: "Our Programs",
+                projects_subtitle: "From sign language education to community initiatives, explore Echo Sign's core projects.",
+                proj_1_title: "Sign Language Flashcards", proj_1_desc: "Transforming daily vocabulary into beautiful flashcards.",
+                proj_2_title: "Storytelling Sessions", proj_2_desc: "Through picture book reading events, deaf and hearing children meet.",
+                proj_3_title: "Int'l Sign Day Initiative", proj_3_desc: "Walking into streets and campuses with flash mobs.",
+                proj_link: "Learn More"
+            }
+        };
+
+        let currentLang = 'zh';
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.classList.remove('fade-in');
+                    void el.offsetWidth;
+                    el.classList.add('fade-in');
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+
+            document.body.className = currentLang === 'en' ? 'lang-en antialiased overflow-x-hidden' : 'lang-zh antialiased overflow-x-hidden';
+            
+            const langBtnText = document.getElementById('lang-btn-text');
+            if (langBtnText) {
+                langBtnText.innerText = currentLang === 'zh' ? 'EN' : '中';
+            }
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            updateContent();
+        }
+
+        async function loadComponents() {
+            try {
+                const headerRes = await fetch('header.html');
+                const headerHtml = await headerRes.text();
+                document.getElementById('header-placeholder').innerHTML = headerHtml;
+
+                const footerRes = await fetch('footer.html');
+                const footerHtml = await footerRes.text();
+                document.getElementById('footer-placeholder').innerHTML = footerHtml;
+
+                if (window.lucide) lucide.createIcons();
+                updateContent();
+            } catch (err) {
+                console.error('Error loading components:', err);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadComponents);
+    </script>
+</body>
+</html>

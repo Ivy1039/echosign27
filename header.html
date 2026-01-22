@@ -1,16 +1,16 @@
 <nav class="fixed w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-orange-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-            <div class="flex-shrink-0 flex items-center gap-2">
-                <img src="https://duk.tw/LvW9J5.png" alt="Echo Sign Logo" class="w-12 h-12 object-contain">
+            <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group cursor-pointer">
+                <img src="https://duk.tw/LvW9J5.png" alt="Echo Sign Logo" class="w-12 h-12 object-contain group-hover:scale-105 transition-transform">
                 <span class="font-bold text-2xl text-gray-800 tracking-wide">Echo Sign</span>
-            </div>
+            </a>
             
             <div class="flex items-center gap-6">
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-rose-500 transition-colors" data-i18n="nav_about">關於我們</a>
-                    <a href="#projects" class="text-gray-600 hover:text-rose-500 transition-colors" data-i18n="nav_projects">專案計畫</a>
-                    <a href="#impact" class="text-gray-600 hover:text-rose-500 transition-colors" data-i18n="nav_impact">加入我們</a>
+                    <a href="index.html#about" class="text-gray-600 hover:text-rose-500 transition-colors" data-i18n="nav_home">首頁</a>
+                    <a href="programs.html" class="text-gray-600 hover:text-rose-500 transition-colors" data-i18n="nav_projects">專案計畫</a>
+                    <a href="index.html#impact" class="text-gray-600 hover:text-rose-500 transition-colors" data-i18n="nav_impact">加入我們</a>
                 </div>
 
                 <button onclick="toggleLanguage()" class="flex items-center gap-1 px-3 py-1 rounded-full border border-rose-200 text-rose-500 hover:bg-rose-50 transition-colors text-sm font-bold">
@@ -18,7 +18,7 @@
                     <i data-lucide="globe" class="w-4 h-4"></i>
                 </button>
 
-                <a href="#donate" class="hidden md:inline-flex gradient-btn text-white px-6 py-2 rounded-full font-medium shadow-md" data-i18n="nav_donate">立即支持</a>
+                <a href="index.html#donate" class="hidden md:inline-flex gradient-btn text-white px-6 py-2 rounded-full font-medium shadow-md" data-i18n="nav_donate">立即支持</a>
                 
                 <div class="md:hidden flex items-center">
                     <i data-lucide="menu" class="w-6 h-6 text-gray-600"></i>
