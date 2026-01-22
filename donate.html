@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即支持 | Echo Sign 小手傳愛</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 同步首頁字體設定 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Nunito:wght@400;600;700&family=Pacifico&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', 'Nunito', sans-serif;
+            background-color: #FDFBF7;
+            color: #4A4A4A;
+        }
+
+        body.lang-en {
+            font-family: 'Nunito', 'Noto Sans TC', sans-serif;
+        }
+
+        .gradient-btn {
+            background: linear-gradient(90deg, #FF8C94 0%, #FFB6B9 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-btn:hover {
+            background: linear-gradient(90deg, #FF707A 0%, #FF9EA3 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 140, 148, 0.3);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden lang-zh">
+
+    <div id="header-placeholder"></div>
+
+    <section id="donate" class="pt-40 pb-24 bg-rose-50 relative overflow-hidden min-h-screen flex items-center">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-rose-100 rounded-full blur-3xl opacity-60 translate-x-1/2 -translate-y-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-[3rem] shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-12 lg:p-20 flex flex-col justify-center">
+                        <h2 class="text-4xl font-bold text-gray-800 mb-6" data-i18n="donate_title">成為共融推手，<br>讓改變發生</h2>
+                        <p class="text-lg text-gray-600 mb-8" data-i18n="donate_desc">
+                            您的每一筆支持，都將化為身心障礙家庭的一盒手語圖卡，或是社群上的一張教學圖卡。
+                        </p>
+                        
+                        <div class="space-y-4 mb-10">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0">
+                                    <i data-lucide="book-open" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">NT$ 800</p>
+                                    <p class="text-sm text-gray-500" data-i18n="donate_item_1">贊助一盒手語圖卡給身心障礙家庭</p>
+                                </div>
+                            </div>
+                            <!-- <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-500 flex-shrink-0">
+                                    <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">NT$ 1,200</p>
+                                    <p class="text-sm text-gray-500" data-i18n="donate_item_2">贊助一場偏鄉手語教學</p>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <button class="gradient-btn text-white w-full sm:w-auto px-8 py-4 rounded-full text-lg font-bold shadow-lg" data-i18n="donate_btn">
+                            立即捐款支持
+                        </button>
+                    </div>
+                    
+                    <div class="bg-gray-200 h-96 lg:h-auto relative">
+                        <img src="https://duk.tw/pKyS4T.jpg" alt="Child learning sign language" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-rose-900/40 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // 翻譯資料庫 (與首頁保持同步)
+        const translations = {
+            zh: {
+                nav_home: "首頁",
+                nav_programs: "專案計畫",
+                nav_volunteer: "加入我們",
+                nav_donate: "立即支持",
+                donate_title: "成為共融推手，<br>讓改變發生",
+                donate_desc: "您的每一筆支持，都將化為身心障礙家庭的一盒手語圖卡，或是社群上的一張教學圖卡。",
+                donate_btn: "立即捐款支持",
+                donate_item_1: "贊助一盒手語圖卡給身心障礙家庭"
+            },
+            en: {
+                nav_home: "Home",
+                nav_programs: "Projects",
+                nav_volunteer: "Join Us",
+                nav_donate: "Donate",
+                donate_title: "Become an Advocate,<br>Make Change Happen",
+                donate_desc: "Your support turns into a sign language picture book for rural schools or a teaching card on social media.",
+                donate_btn: "Donate Now",
+                donate_item_1: "Sponsor a set of sign language flashcards for families with disabilities"
+            }
+        };
+
+        let currentLang = 'zh';
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+
+            document.body.className = currentLang === 'en' ? 'lang-en antialiased' : 'lang-zh antialiased';
+            
+            const langBtnText = document.getElementById('lang-btn-text');
+            if (langBtnText) {
+                langBtnText.innerText = currentLang === 'zh' ? 'EN' : '中';
+            }
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            updateContent();
+        }
+
+        async function loadComponents() {
+            try {
+                // 載入頁首
+                const headerRes = await fetch('header.html');
+                const headerHtml = await headerRes.text();
+                document.getElementById('header-placeholder').innerHTML = headerHtml;
+
+                // 載入頁尾
+                const footerRes = await fetch('footer.html');
+                const footerHtml = await footerRes.text();
+                document.getElementById('footer-placeholder').innerHTML = footerHtml;
+
+                // 初始化圖示與翻譯
+                if (window.lucide) lucide.createIcons();
+                updateContent();
+            } catch (err) {
+                console.error('載入組件失敗:', err);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadComponents);
+    </script>
+</body>
+</html>
