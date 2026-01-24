@@ -48,8 +48,8 @@ const translations = {
         donate_item_1: "贊助一盒手語圖卡給身心障礙家庭",
 
         // --- 專案計畫頁面 (Programs Page) ---
-        projects_title: "我們如何傳遞愛",
-        projects_subtitle: "從手語教學到社群倡議，探索 Echo Sign 的核心計畫。",
+        programs_title: "我們如何傳遞愛",
+        programs_subtitle: "從手語教學到社群倡議，探索 Echo Sign 的核心計畫。",
         proj_1_title: "手語圖卡計畫",
         proj_1_desc: "將日常詞彙轉化為精美圖卡，在社群媒體上引起迴響。",
         proj_2_title: "親子手語故事屋",
@@ -78,7 +78,7 @@ const translations = {
         impact_title: "Our Impact",
         impact_1: "Hearing impaired reacheHearing imapired individuals reached through our intitiativesd", 
         impact_2: "Books collected and donated to the hearing impaired community", 
-        impact_3: "USD Raised by our community to fund events and future projects", 
+        impact_3: "USD Raised by our community to fund events and future programs", 
         impact_4: "Company / organization partnerships", 
         impact_5: "Sign card sets given out to the hearing imapired community",
 
@@ -114,8 +114,8 @@ const translations = {
         donate_item_1: "Sponsor a set of sign language flashcards for families with disabilities",
 
         // --- Programs Page ---
-        projects_title: "Our Programs",
-        projects_subtitle: "From sign language education to community initiatives, explore Echo Sign's core projects.",
+        programs_title: "Our Programs",
+        programs_subtitle: "From sign language education to community initiatives, explore Echo Sign's core programs.",
         proj_1_title: "Sign Language Flashcards",
         proj_1_desc: "Transforming daily vocabulary into beautiful flashcards, making learning sign language easy.",
         proj_2_title: "Storytelling Sessions",
