@@ -106,73 +106,7 @@
 
     <div id="footer-placeholder"></div>
 
-    <script>
-        const translations = {
-            zh: {
-                nav_home: "首頁", nav_programs: "專案計畫", nav_volunteer: "加入我們", nav_donate: "立即支持",
-                projects_title: "我們如何傳遞愛",
-                projects_subtitle: "從手語教學到社群倡議，探索 Echo Sign 的核心計畫。",
-                proj_1_title: "手語圖卡計畫", proj_1_desc: "將日常詞彙轉化為精美圖卡，在社群媒體上引起迴響。",
-                proj_2_title: "親子手語故事屋", proj_2_desc: "透過繪本共讀活動，讓聾聽孩童在故事中相遇。",
-                proj_3_title: "國際手語日倡議", proj_3_desc: "走入街頭與校園，結合快閃活動與展覽。",
-                proj_link: "了解更多"
-            },
-            en: {
-                nav_home: "Home", nav_programs: "Programs", nav_volunteer: "Volunteer Today", nav_donate: "Donate",
-                projects_title: "Our Programs",
-                projects_subtitle: "From sign language education to community initiatives, explore Echo Sign's core projects.",
-                proj_1_title: "Sign Language Flashcards", proj_1_desc: "Transforming daily vocabulary into beautiful flashcards.",
-                proj_2_title: "Storytelling Sessions", proj_2_desc: "Through picture book reading events, deaf and hearing children meet.",
-                proj_3_title: "Int'l Sign Day Initiative", proj_3_desc: "Walking into streets and campuses with flash mobs.",
-                proj_link: "Learn More"
-            }
-        };
-
-        let currentLang = 'zh';
-
-        function updateContent() {
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[currentLang][key]) {
-                    el.classList.remove('fade-in');
-                    void el.offsetWidth;
-                    el.classList.add('fade-in');
-                    el.innerHTML = translations[currentLang][key];
-                }
-            });
-
-            document.body.className = currentLang === 'en' ? 'lang-en antialiased overflow-x-hidden' : 'lang-zh antialiased overflow-x-hidden';
-            
-            const langBtnText = document.getElementById('lang-btn-text');
-            if (langBtnText) {
-                langBtnText.innerText = currentLang === 'zh' ? 'EN' : '中';
-            }
-        }
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'zh' ? 'en' : 'zh';
-            updateContent();
-        }
-
-        async function loadComponents() {
-            try {
-                const headerRes = await fetch('header.html');
-                const headerHtml = await headerRes.text();
-                document.getElementById('header-placeholder').innerHTML = headerHtml;
-
-                const footerRes = await fetch('footer.html');
-                const footerHtml = await footerRes.text();
-                document.getElementById('footer-placeholder').innerHTML = footerHtml;
-
-                if (window.lucide) lucide.createIcons();
-                updateContent();
-            } catch (err) {
-                console.error('Error loading components:', err);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', loadComponents);
-    </script>
+    <script src="language.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
