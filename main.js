@@ -93,24 +93,28 @@ const animateCounters = () => {
     counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
         const prefix = counter.getAttribute('data-prefix') || '';
-        const duration = 2000; // 整段動畫想要跑多久 (2000ms = 2秒)
-        const frameRate = 1000 / 60; // 模擬 60fps (約 16ms 跑一次)
+        const duration = 2000; // 整段動畫跑 2 秒
+        const frameRate = 1000 / 60; 
         const totalFrames = Math.round(duration / frameRate);
         
         let currentFrame = 0;
 
+        // 【防暴走機制】清除前一次可能還沒跑完的動畫計時器
+        if (counter.animationTimeout) {
+            clearTimeout(counter.animationTimeout);
+        }
+
         const updateCount = () => {
             currentFrame++;
             
-            // 使用進度比例來計算當前數字 (線性增加)
             const progress = currentFrame / totalFrames;
             const currentCount = Math.round(target * progress);
 
             if (currentFrame < totalFrames) {
                 counter.innerText = prefix + currentCount.toLocaleString() + "+";
-                setTimeout(updateCount, frameRate);
+                // 把計時器存進 DOM 元素裡，方便下次清除
+                counter.animationTimeout = setTimeout(updateCount, frameRate);
             } else {
-                // 確保最後一格數字絕對正確
                 counter.innerText = prefix + target.toLocaleString() + "+";
             }
         };
@@ -119,16 +123,28 @@ const animateCounters = () => {
     });
 };
 
-// 使用 Intersection Observer 確保捲動到該位置才開始跑動畫
+// 使用 Intersection Observer 監控區塊
 const observerOptions = {
-    threshold: 0.5 // 區塊出現 50% 時觸發
+    threshold: 0.1 // 調低到 0.1，只要露出一點點畫面就開始跑
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            // 當區塊進入畫面：開始跑動畫
             animateCounters();
-            observer.unobserve(entry.target); // 只跑一次動畫
+        } else {
+            // 當區塊離開畫面：強制歸零，準備下一次進場
+            const counters = document.querySelectorAll('.counter-value');
+            counters.forEach(counter => {
+                const prefix = counter.getAttribute('data-prefix') || '';
+                counter.innerText = prefix + "0";
+                
+                // 同時把還沒跑完的動畫停掉，節省瀏覽器效能
+                if (counter.animationTimeout) {
+                    clearTimeout(counter.animationTimeout);
+                }
+            });
         }
     });
 }, observerOptions);
