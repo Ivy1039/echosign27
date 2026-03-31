@@ -84,3 +84,57 @@ async function loadComponents() {
 
 // 監聽 DOM 載入完成事件
 document.addEventListener('DOMContentLoaded', loadComponents);
+
+// Home - Impact
+
+const animateCounters = () => {
+    const counters = document.querySelectorAll('.counter-value');
+
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const prefix = counter.getAttribute('data-prefix') || '';
+        const duration = 2000; // 整段動畫想要跑多久 (2000ms = 2秒)
+        const frameRate = 1000 / 60; // 模擬 60fps (約 16ms 跑一次)
+        const totalFrames = Math.round(duration / frameRate);
+        
+        let currentFrame = 0;
+
+        const updateCount = () => {
+            currentFrame++;
+            
+            // 使用進度比例來計算當前數字 (線性增加)
+            const progress = currentFrame / totalFrames;
+            const currentCount = Math.round(target * progress);
+
+            if (currentFrame < totalFrames) {
+                counter.innerText = prefix + currentCount.toLocaleString() + "+";
+                setTimeout(updateCount, frameRate);
+            } else {
+                // 確保最後一格數字絕對正確
+                counter.innerText = prefix + target.toLocaleString() + "+";
+            }
+        };
+
+        updateCount();
+    });
+};
+
+// 使用 Intersection Observer 確保捲動到該位置才開始跑動畫
+const observerOptions = {
+    threshold: 0.5 // 區塊出現 50% 時觸發
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target); // 只跑一次動畫
+        }
+    });
+}, observerOptions);
+
+// 監聽 Impact 區塊
+const impactSection = document.querySelector('#impact');
+if (impactSection) {
+    observer.observe(impactSection);
+}
