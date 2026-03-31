@@ -6,51 +6,7 @@
     <title>Echo Sign 小手傳愛</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>        
-        body {
-            font-family: 'Noto Sans TC', 'Nunito', sans-serif;
-            background-color: #FDFBF7;
-            color: #4A4A4A;
-        }
-
-        /* 英文模式下的字體調整 */
-        body.lang-en {
-            font-family: 'Nunito', 'Noto Sans TC', sans-serif;
-        }
-
-        .gradient-text {
-            background: linear-gradient(to right, #e1306c, #f77737);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .gradient-btn {
-            background: linear-gradient(90deg, #FF8C94 0%, #FFB6B9 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .gradient-btn:hover {
-            background: linear-gradient(90deg, #FF707A 0%, #FF9EA3 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255, 140, 148, 0.3);
-        }
-
-        .blob {
-            position: absolute;
-            filter: blur(40px);
-            z-index: -1;
-            opacity: 0.5;
-        }
-
-        /* 語言切換動畫 */
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="theme.css">
 </head>
 <body class="antialiased overflow-x-hidden lang-zh">
 
@@ -76,19 +32,19 @@
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="donate.html" class="gradient-btn text-white px-8 py-4 rounded-full text-lg font-medium shadow-lg text-center">
-                            <span data-i18n="hero_cta_primary">了解更多</span>
+                            <span data-i18n="hero_cta_primary">支持我們</span>
                         </a>
                         <a href="#our_story" class="px-8 py-4 rounded-full text-lg font-medium text-gray-600 bg-white border border-gray-200 hover:border-rose-300 hover:text-rose-500 transition-all shadow-sm text-center">
-                            <span data-i18n="hero_cta_secondary">支持我們</span>
+                            <span data-i18n="hero_cta_secondary">了解更多</span>
                         </a>
                     </div>
                 </div>
                 
                 <div class="relative lg:h-[600px] w-full flex items-center justify-center">
-                    <div class="relative w-full max-w-lg aspect-square">
+                    <div class="relative w-full max-w-2x1 aspect-[3/2]">
                         <div class="absolute inset-0 bg-white rounded-[3rem] shadow-2xl overflow-hidden transform rotate-3 transition-transform hover:rotate-0 duration-700">
                             <div class="w-full h-full bg-gray-100 flex items-center justify-center relative overflow-hidden">
-                                <img src="https://duk.tw/iiiywC.jpg" alt="Megan Chen - Founder" class="object-cover w-full h-full opacity-90">
+                                <img src="image/S__2211974.jpg" alt="Megan Chen - Founder" class="object-cover w-full h-full opacity-90">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                             </div>
                         </div>

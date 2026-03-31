@@ -1,0 +1,72 @@
+/* 1. 定義主題變數 */
+:root {
+    /* 裝飾與背景 */
+    --bg-main: #FDFBF7;         /* 網頁底色 */
+    
+    /* 文字顏色 */
+    --text-main: #4A4A4A;
+    
+    /* 字體設定 */
+    --font-zh: 'Noto Sans TC', 'Nunito', sans-serif;
+    --font-en: 'Nunito', 'Noto Sans TC', sans-serif;
+}
+
+/* 2. 全域設定 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Nunito:wght@400;600;700&display=swap');
+
+body {
+    font-family: var(--font-zh);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+body.lang-en {
+    font-family: var(--font-en);
+}
+
+/* 3. 元件樣式 */
+
+/* 漸層按鈕 */
+.gradient-btn {
+    background: linear-gradient(90deg, #FF8C94 0%, #FFB6B9 100%);
+    transition: all 0.3s ease;
+}
+        
+.gradient-btn:hover {
+    background: linear-gradient(90deg, #FF707A 0%, #FF9EA3 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 140, 148, 0.3);
+}
+
+/* 漸層文字 */
+.gradient-text {
+    background: linear-gradient(to right, #e1306c, #f77737);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 動畫與裝飾 */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.blob {
+    position: absolute;
+    filter: blur(40px);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.program-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

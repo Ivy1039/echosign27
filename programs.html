@@ -6,48 +6,7 @@
     <title>Echo Sign 專案計畫 | Programs</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* 同樣引入 Pacifico 字體以支援 Header */
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Nunito:wght@400;600;700&family=Pacifico&display=swap');
-        
-        body {
-            font-family: 'Noto Sans TC', 'Nunito', sans-serif;
-            background-color: #FDFBF7;
-            color: #4A4A4A;
-        }
-
-        body.lang-en {
-            font-family: 'Nunito', 'Noto Sans TC', sans-serif;
-        }
-
-        .gradient-text {
-            background: linear-gradient(to right, #e1306c, #f77737);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .gradient-btn {
-            background: linear-gradient(90deg, #FF8C94 0%, #FFB6B9 100%);
-            transition: all 0.3s ease;
-        }
-
-        .program-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .program-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="theme.css">
 </head>
 <body class="antialiased overflow-x-hidden lang-zh">
 
