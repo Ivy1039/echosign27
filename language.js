@@ -6,6 +6,8 @@ const translations = {
         nav_programs: "專案計畫",
         nav_volunteer: "加入我們",
         nav_donate: "立即支持",
+        nav_about: "關於我們",
+        nav_timeline: "發展歷程",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
 
         // --- 首頁 (Index Page) ---
@@ -64,7 +66,10 @@ const translations = {
         nav_programs: "Programs",
         nav_volunteer: "Volunteer Today",
         nav_donate: "Donate",
+        nav_about:"About Us",
+        nav_timeline: "Timeline",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
+        
 
         // --- Index Page ---
         hero_badge: "Youth-Led Initiative for Inclusion",
