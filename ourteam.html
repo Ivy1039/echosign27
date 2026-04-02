@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | Echo Sign</title>    
+    <link rel="icon" href="image/echosign_logo_circle.png" type="image/png">    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="theme.css">
+
+    <style>
+        .portrait-container {
+            aspect-ratio: 3 / 4; /* 強制垂直長方形比例 */
+            overflow: hidden;
+        }
+        .portrait-container img {
+            width: 100%;
+            height: 100%;
+            object-cover: cover;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden lang-zh">
+
+    <div id="header-placeholder"></div>
+
+    <section class="pt-32 pb-12 bg-rose-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-rose-500 font-bold tracking-wider uppercase text-sm">Our Team</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mt-2 mb-6" data-i18n="team_page_title">認識 Echo Sign 團隊</h1>
+            <p class="max-w-2xl mx-auto text-gray-600 text-lg" data-i18n="team_page_subtitle">我們是一群充滿熱忱的青年志工，致力於透過手語教學與繪本故事，打破溝通隔閡，創造聾聽共融的溫暖世界。</p>
+        </div>
+    </section>
+
+    <section class="py-8 bg-rose-50/50" id="team-grid">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-12">
+                
+                <div class="team-member-card group cursor-pointer" data-member="0">
+                    <div class="portrait-container rounded-3xl shadow-sm group-hover:shadow-xl transition-all duration-500 border border-rose-50/50">
+                        <img src="image/Megan.png" alt="Megan Chen" class="object-cover w-full h-full">
+                    </div>
+                    <div class="mt-5 text-left">
+                        <h3 class="text-2xl font-bold text-gray-800">Megan Chen</h3>
+                        <p class="text-base font-medium text-rose-500 uppercase tracking-wider">Founder</p>
+                    </div>
+                </div>
+
+                <div class="team-member-card group cursor-pointer" data-member="1">
+                    <div class="portrait-container rounded-3xl shadow-sm group-hover:shadow-xl transition-all duration-500 border border-rose-50/50">
+                        <img src="image/teammate1.png" alt="Teammate1" class="object-cover w-full h-full">
+                    </div>
+                    <div class="mt-5 text-left">
+                        <h3 class="text-2xl font-bold text-gray-800">Teammate1</h3>
+                        <p class="text-base font-medium text-rose-500 uppercase tracking-wider">Position</p>
+                    </div>
+                </div>
+
+                <div class="team-member-card group cursor-pointer" data-member="2">
+                    <div class="portrait-container rounded-3xl shadow-sm group-hover:shadow-xl transition-all duration-500 border border-rose-50/50">
+                        <img src="image/teammate2.png" alt="Teammate2" class="object-cover w-full h-full">
+                    </div>
+                    <div class="mt-5 text-left">
+                        <h3 class="text-2xl font-bold text-gray-800">Teammate2</h3>
+                        <p class="text-base font-medium text-rose-500 uppercase tracking-wider">Position</p>
+                    </div>
+                </div>
+
+                <div class="team-member-card group cursor-pointer" data-member="3">
+                    <div class="portrait-container rounded-3xl shadow-sm group-hover:shadow-xl transition-all duration-500 border border-rose-50/50">
+                        <img src="image/teammate3.png" alt="Teammate3" class="object-cover w-full h-full">
+                    </div>
+                    <div class="mt-5 text-left">
+                        <h3 class="text-2xl font-bold text-gray-800">Teammate3</h3>
+                        <p class="text-base font-medium text-rose-500 uppercase tracking-wider">Position</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="memberModal" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen p-4 sm:p-0">
+            <div class="fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity" aria-hidden="true" onclick="closeModal()"></div>
+
+            <div class="relative bg-white/95 rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:max-w-7xl sm:w-full border border-white/20 p-8 md:p-12">
+                
+                <button type="button" class="absolute top-6 right-6 text-gray-400 hover:text-rose-500 transition-colors" onclick="closeModal()">
+                    <i data-lucide="x" class="w-8 h-8"></i>
+                </button>
+
+                <div class="flex flex-col md:flex-row gap-16 items-start">
+                    
+                    <div class="flex-1 space-y-4 pt-10">
+                        <h2 id="modalName" class="text-5xl font-bold text-gray-800"></h2>
+                        <p id="modalRole" class="text-lg font-medium text-rose-500 uppercase tracking-wider"></p>
+                        
+                        <div class="bg-gray-50/50 p-8 rounded-2xl border border-gray-100 mt-10">
+                            <!-- <h4 class="text-xl font-semibold text-gray-800 mb-3">關於成員</h4> -->
+                            <p id="modalBio" class="text-gray-600 leading-relaxed text-lg"></p>
+                        </div>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full md:w-2/5 portrait-container rounded-3xl shadow-xl border border-rose-50/50">
+                        <img id="modalImg" src="" alt="Modal Image" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="main.js"></script>
+    <script src="language.js"></script>
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+
+        const membersData = [
+            {
+                name: "Megan Chen",
+                role: "Founder",
+                bio: "Discription",
+                img: "image/Megan.png"
+            },
+            {
+                name: "Teammate1",
+                role: "Position",
+                bio: "Discription",
+                img: "image/teammate1.png"
+            },
+            {
+                name: "Teammate2",
+                role: "Position",
+                bio: "Discription",
+                img: "image/teammate2.png"
+            },
+            {
+                name: "Teammate3",
+                role: "Position",
+                bio: "Discription",
+                img: "image/teammate3.png"
+            }
+        ];
+
+        const modal = document.getElementById('memberModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalName = document.getElementById('modalName');
+        const modalRole = document.getElementById('modalRole');
+        const modalBio = document.getElementById('modalBio');
+
+        // 打開彈出視窗
+        document.querySelectorAll('.team-member-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const memberIndex = this.getAttribute('data-member');
+                const member = membersData[memberIndex];
+
+                // 賦值給視窗內容
+                modalImg.src = member.img;
+                modalName.innerText = member.name;
+                modalRole.innerText = member.role;
+                modalBio.innerText = member.bio;
+
+                // 顯示視窗
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // 鎖定滾動
+            });
+        });
+
+        // 關閉彈出視窗
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; // 恢復滾動
+        }
+    </script>
+</body>
+</html>

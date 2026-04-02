@@ -8,6 +8,7 @@ const translations = {
         nav_donate: "立即支持",
         nav_about: "關於我們",
         nav_timeline: "發展歷程",
+        nav_team: "團隊夥伴",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
 
         // --- 首頁 (Index Page) ---
@@ -58,7 +59,11 @@ const translations = {
         proj_2_desc: "透過繪本共讀活動，讓聾聽孩童在故事中相遇。",
         proj_3_title: "國際手語日倡議",
         proj_3_desc: "走入街頭與校園，結合快閃活動與展覽。",
-        proj_link: "了解更多"
+        proj_link: "了解更多",
+
+        // --- 團隊夥伴 ---
+        team_page_title: "認識 Echo Sign 團隊",
+        team_page_subtitle: "我們是一群充滿熱忱的青年志工，致力於透過手語教學與繪本故事，打破溝通隔閡，創造聾聽共融的溫暖世界。"
     },
     en: {
         // --- Navigation & Footer ---
@@ -68,6 +73,7 @@ const translations = {
         nav_donate: "Donate",
         nav_about:"About Us",
         nav_timeline: "Timeline",
+        nav_team: "Our Team",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
         
 
@@ -127,6 +133,10 @@ const translations = {
         proj_2_desc: "Through picture book reading events, deaf and hearing children meet in stories.",
         proj_3_title: "Int'l Sign Day Initiative",
         proj_3_desc: "Walking into streets and campuses with flash mobs and exhibitions to raise awareness.",
-        proj_link: "Learn More"
+        proj_link: "Learn More",
+
+        // --- Our Team ---
+        team_page_title: "Meet the Echo Sign Team",
+        team_page_subtitle: "We are a group of passionate youth volunteers dedicated to breaking communication barriers and creating an inclusive world through sign language education and picture books.",
     }
 };
