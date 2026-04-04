@@ -24,7 +24,20 @@
                             </div>
                         </div>
                     </div>
-                    <a href="programs.html" class="text-gray-600 hover:text-rose-500 transition-colors" data-i18n="nav_programs">專案計畫</a>
+                    <div class="relative group pb-4 -mb-4 pt-4 -mt-4 flex items-center">
+                        <a href="programs.html" class="flex items-center gap-1 text-gray-600 hover:text-rose-500 transition-colors cursor-pointer">
+                            <span data-i18n="nav_programs">專案計畫</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"></i>
+                        </a>
+                        
+                        <div class="absolute top-full -left-4 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-rose-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="storytelling.html" class="block px-5 py-3 text-sm text-gray-600 hover:text-rose-500 hover:bg-rose-50 transition-colors" data-i18n="nav_storytelling">
+                                    樹屋故事時間
+                                </a>
+                                </div>
+                        </div>
+                    </div>
                     <a href="index.html#impact" class="text-gray-600 hover:text-rose-500 transition-colors" data-i18n="nav_volunteer">加入我們</a>
                 </div>
 

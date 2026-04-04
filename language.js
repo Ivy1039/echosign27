@@ -9,6 +9,7 @@ const translations = {
         nav_about: "關於我們",
         nav_timeline: "發展歷程",
         nav_team: "團隊夥伴",
+        nav_storytelling: "說故事節目",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
 
         // --- 首頁 (Index Page) ---
@@ -186,7 +187,10 @@ const translations = {
         t25_12_desc: "<p>與 MegansBakery3 展開合作，每售出一片餅乾，將捐出 40% 的利潤給 EchoSign！</p>",
         t25_13_date: "2025 年 8 月 16 日",
         t25_13_title: "DreamGolf 高爾夫體驗日",
-        t25_13_desc: "<p>與 DreamGolf 成為合作夥伴，為聽障家庭舉辦了一場免費的高爾夫歡樂體驗日。</p>"
+        t25_13_desc: "<p>與 DreamGolf 成為合作夥伴，為聽障家庭舉辦了一場免費的高爾夫歡樂體驗日。</p>",
+
+        // --- storytelling ---
+        story_page_title:"樹屋故事時間",
     },
     en: {
         // --- Navigation & Footer ---
@@ -197,6 +201,7 @@ const translations = {
         nav_about:"About Us",
         nav_timeline: "Timeline",
         nav_team: "Our Team",
+        nav_storytelling: "Storytelling Program",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
         
 
@@ -257,7 +262,7 @@ const translations = {
         proj_3_title: "Int'l Sign Day Initiative",
         proj_3_desc: "Walking into streets and campuses with flash mobs and exhibitions to raise awareness.",
         proj_link: "Learn More",
-
+        
         // --- Our Team ---
         team_page_title: "Meet the Echo Sign Team",
         team_page_subtitle: "We are a group of passionate youth volunteers dedicated to breaking communication barriers and creating an inclusive world through sign language education and picture books.",
@@ -384,6 +389,9 @@ const translations = {
         t25_12_desc: "<p>Collab with MegansBakery3 with 40% of profits given to EchoSign for each cookie they sell!</p>",
         t25_13_date: "August 16, 2025",
         t25_13_title: "DreamGolf Fun Day",
-        t25_13_desc: "<p>Partnered with DreamGolf hosting a free golf fun day experience for hearing impaired families.</p>"
+        t25_13_desc: "<p>Partnered with DreamGolf hosting a free golf fun day experience for hearing impaired families.</p>",
+    
+        // --- storytelling ---
+        story_page_title:"Treehouse story time sessions",
     }
 };
