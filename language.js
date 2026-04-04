@@ -191,6 +191,7 @@ const translations = {
 
         // --- storytelling ---
         story_page_title:"樹屋故事時間",
+        story_page_desc:"這裡有我們最新製作的雙語教案！這些簡報專為聽障家庭設計，每次能提供 1-2 小時的互動故事體驗，同時幫助孩子們學習基礎英文單字。",
     },
     en: {
         // --- Navigation & Footer ---
@@ -393,5 +394,6 @@ const translations = {
     
         // --- storytelling ---
         story_page_title:"Treehouse story time sessions",
+        story_page_desc:"Here are our latest lesson plans! These slides are made and planned with care to deliver a 1-2 hour interactive story session for hearing impaired families and at the same time help children learn basic English vocabulary!",
     }
 };
