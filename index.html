@@ -56,8 +56,8 @@
                                     <i data-lucide="heart" class="w-6 h-6 text-rose-500 fill-current"></i>
                                 </div>
                                 <div>
-                                    <p class="text-xs text-gray-500">已幫助</p>
-                                    <p class="font-bold text-gray-800">1,000+ 位學童</p>
+                                    <p class="text-xs text-gray-500" data-i18n="hero_badge_help">已幫助</p>
+                                    <p class="font-bold text-gray-800" data-i18n="hero_badge_count">1,000+ 位學童</p>
                                 </div>
                             </div>
                         </div>
@@ -87,11 +87,11 @@
                     <div id="about-content" class="space-y-6 text-gray-600 leading-relaxed text-lg" data-i18n="about_content">
                     </div>
 
-                    <div class="pt-4">
+                    <!-- <div class="pt-4">
                         <a href="#" class="inline-flex items-center text-rose-500 font-bold hover:text-rose-600 transition-colors border-b-2 border-transparent hover:border-rose-200">
                             <span data-i18n="about_link">閱讀更多創辦故事</span> <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -99,47 +99,54 @@
 
     <section id="impact" class="py-20 bg-white shadow-inner relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                 <span class="text-rose-500 font-bold tracking-wider uppercase text-sm">Our Impact</span>
-                 <h2 class="text-3xl font-bold text-gray-800 mt-2" data-i18n="impact_title">我們的影響力</h2>
+            
+            <div class="text-center mb-16">
+                <span class="text-rose-500 font-bold tracking-wider uppercase text-sm">Our Impact</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-2" data-i18n="impact_title">我們的影響力</h2>
             </div>
 
-            <div class="flex flex-wrap justify-center gap-8 lg:gap-12">
-                <div class="w-full sm:w-1/2 lg:w-1/4 p-6 bg-rose-50/50 rounded-2xl text-center hover:bg-rose-50 transition-colors">
-                    <div class="w-12 h-12 mx-auto bg-rose-100 rounded-full flex items-center justify-center text-rose-500 mb-4">
-                        <i data-lucide="users" class="w-6 h-6"></i>
+            <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
+                
+                <div class="w-full sm:w-[45%] lg:w-[30%] p-8 bg-rose-50/60 rounded-3xl text-center flex flex-col justify-center">
+                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-rose-500 mb-5 shadow-sm">
+                        <i data-lucide="users" class="w-7 h-7"></i>
                     </div>
-                    <div class="text-4xl font-bold text-gray-800 mb-2 counter-value" data-target="1000">0</div>
-                    <div class="text-sm text-gray-600 font-medium" data-i18n="impact_1">接觸到的聽障人士</div>
+                    <div class="text-5xl font-extrabold text-gray-900 mb-3 counter-value tracking-tight" data-target="1000">0</div>
+                    <div class="text-sm text-gray-600 font-bold" data-i18n="impact_1">接觸到的聽障人士</div>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/4 p-6 bg-orange-50/50 rounded-2xl text-center hover:bg-orange-50 transition-colors">
-                    <div class="w-12 h-12 mx-auto bg-orange-100 rounded-full flex items-center justify-center text-orange-500 mb-4">
-                        <i data-lucide="book" class="w-6 h-6"></i>
+
+                <div class="w-full sm:w-[45%] lg:w-[30%] p-8 bg-orange-50/60 rounded-3xl text-center flex flex-col justify-center">
+                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-orange-500 mb-5 shadow-sm">
+                        <i data-lucide="book" class="w-7 h-7"></i>
                     </div>
-                    <div class="text-4xl font-bold text-gray-800 mb-2 counter-value" data-target="800">0</div>
-                    <div class="text-sm text-gray-600 font-medium" data-i18n="impact_2">捐贈給聽障社群的書籍</div>
+                    <div class="text-5xl font-extrabold text-gray-900 mb-3 counter-value tracking-tight" data-target="800">0</div>
+                    <div class="text-sm text-gray-600 font-bold" data-i18n="impact_2">捐贈給社群的書籍</div>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/4 p-6 bg-yellow-50/50 rounded-2xl text-center hover:bg-yellow-50 transition-colors">
-                    <div class="w-12 h-12 mx-auto bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 mb-4">
-                        <i data-lucide="dollar-sign" class="w-6 h-6"></i>
+
+                <div class="w-full sm:w-[45%] lg:w-[30%] p-8 bg-yellow-50/80 rounded-3xl text-center flex flex-col justify-center">
+                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-yellow-500 mb-5 shadow-sm">
+                        <i data-lucide="dollar-sign" class="w-7 h-7"></i>
                     </div>
-                    <div class="text-4xl font-bold text-gray-800 mb-2 counter-value" data-target="5500" data-prefix="$">0</div>
-                    <div class="text-sm text-gray-600 font-medium" data-i18n="impact_3">募集到的資金 (美金)</div>
+                    <div class="text-5xl font-extrabold text-gray-900 mb-3 counter-value tracking-tight" data-target="5500" data-prefix="$">0</div>
+                    <div class="text-sm text-gray-600 font-bold" data-i18n="impact_3">募集到的資金 (美金)</div>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/4 p-6 bg-blue-50/50 rounded-2xl text-center hover:bg-blue-50 transition-colors">
-                    <div class="w-12 h-12 mx-auto bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mb-4">
-                        <i data-lucide="handshake" class="w-6 h-6"></i>
+
+                <div class="w-full sm:w-[45%] lg:w-[30%] p-8 bg-blue-50/60 rounded-3xl text-center flex flex-col justify-center">
+                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-blue-500 mb-5 shadow-sm">
+                        <i data-lucide="handshake" class="w-7 h-7"></i>
                     </div>
-                    <div class="text-4xl font-bold text-gray-800 mb-2 counter-value" data-target="6">0</div>
-                    <div class="text-sm text-gray-600 font-medium" data-i18n="impact_4">企業/組織合作夥伴</div>
+                    <div class="text-5xl font-extrabold text-gray-900 mb-3 counter-value tracking-tight" data-target="6">0</div>
+                    <div class="text-sm text-gray-600 font-bold" data-i18n="impact_4">企業/組織合作夥伴</div>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/4 p-6 bg-purple-50/50 rounded-2xl text-center hover:bg-purple-50 transition-colors">
-                    <div class="w-12 h-12 mx-auto bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mb-4">
-                        <i data-lucide="layers" class="w-6 h-6"></i>
+
+                <div class="w-full sm:w-[45%] lg:w-[30%] p-8 bg-purple-50/60 rounded-3xl text-center flex flex-col justify-center">
+                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-purple-500 mb-5 shadow-sm">
+                        <i data-lucide="layers" class="w-7 h-7"></i>
                     </div>
-                    <div class="text-4xl font-bold text-gray-800 mb-2 counter-value" data-target="350">0</div>
-                    <div class="text-sm text-gray-600 font-medium" data-i18n="impact_5">發放給聽障社群的手語卡套組</div>
+                    <div class="text-5xl font-extrabold text-gray-900 mb-3 counter-value tracking-tight" data-target="350">0</div>
+                    <div class="text-sm text-gray-600 font-bold" data-i18n="impact_5">發放的手語卡套組</div>
                 </div>
+
             </div>
         </div>
     </section>

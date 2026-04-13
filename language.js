@@ -20,6 +20,9 @@ const translations = {
         hero_desc: "Echo Sign 致力於打破溝通隔閡。我們透過手語圖卡與繪本，搭建聾聽之間的橋樑，創造一個無障礙的溫暖世界。",
         hero_cta_primary: "支持我們",
         hero_cta_secondary: "了解更多",
+
+        hero_badge_help: "已幫助",
+        hero_badge_count: "1,000+ 位學童",
         
         impact_title: "我們的影響力",
         impact_1: "透過計畫觸及的聽障人士",
@@ -215,6 +218,9 @@ const translations = {
         hero_desc: "Echo Sign is dedicated to breaking communication barriers. We build bridges between the deaf and hearing communities through sign language flashcards and picture books.",
         hero_cta_primary: "Donate",
         hero_cta_secondary: "Learn More",
+
+        hero_badge_help: "Helped",
+        hero_badge_count: "1,000+ Children",
 
         impact_title: "Our Impact",
         impact_1: "Hearing impaired reacheHearing imapired individuals reached through our intitiativesd", 
