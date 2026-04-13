@@ -31,9 +31,13 @@ function updateContent() {
     });
 
     // 根據語系切換全域字體樣式
-    document.body.className = currentLang === 'en' 
-        ? 'lang-en antialiased overflow-x-hidden' 
-        : 'lang-zh antialiased overflow-x-hidden';
+    if (currentLang === 'en') {
+        document.body.classList.remove('lang-zh');
+        document.body.classList.add('lang-en');
+    } else {
+        document.body.classList.remove('lang-en');
+        document.body.classList.add('lang-zh');
+    }
     
     // 更新導航列中的切換按鈕文字 (EN / 中)
     const langBtnText = document.getElementById('lang-btn-text');

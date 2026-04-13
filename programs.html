@@ -9,60 +9,62 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="theme.css">
 </head>
-<body class="antialiased overflow-x-hidden lang-zh">
+<body class="antialiased overflow-x-hidden lang-zh flex flex-col min-h-screen">
 
     <div id="header-placeholder"></div>
 
-    <section class="pt-32 pb-12 bg-rose-50/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="text-rose-500 font-bold tracking-wider uppercase text-sm block mb-3">Our Programs</span>
-            <h1 class="text-4xl lg:text-5xl font-bold text-gray-800" data-i18n="programs_title">我們如何傳遞愛</h1>
-            <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto" data-i18n="programs_subtitle">
-                從手語教學到社群倡議，探索 Echo Sign 的核心計畫。
-            </p>
-        </div>
-    </section>
+    <main class="flex-grow bg-rose-50/50">
+        <section class="pt-32 pb-12 bg-rose-50/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="text-rose-500 font-bold tracking-wider uppercase text-sm block mb-3">Our Programs</span>
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-800" data-i18n="programs_title">我們如何傳遞愛</h1>
+                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto" data-i18n="programs_subtitle">
+                    從手語教學到社群倡議，探索 Echo Sign 的核心計畫。
+                </p>
+            </div>
+        </section>
 
-    <section class="py-16 bg-[#FFF5F5]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="program-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="image/vPnlWj.jpg" alt="Sign Language Cards" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-rose-500">IG Hit</div>
+        <section class="py-16 bg-[#FFF5F5]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="program-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="image/vPnlWj.jpg" alt="Sign Language Cards" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-rose-500">IG Hit</div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_1_title">手語圖卡計畫</h3>
+                            <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_1_desc">將日常詞彙轉化為精美圖卡，在社群媒體上引起迴響。</p>
+                            <a href="#" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
+                        </div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_1_title">手語圖卡計畫</h3>
-                        <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_1_desc">將日常詞彙轉化為精美圖卡，在社群媒體上引起迴響。</p>
-                        <a href="#" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
-                    </div>
-                </div>
 
-                <div class="program-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="image/iRK2i8.jpg" alt="Storytelling" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="program-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="image/iRK2i8.jpg" alt="Storytelling" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_2_title">親子手語故事屋</h3>
+                            <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_2_desc">透過繪本共讀活動，讓聾聽孩童在故事中相遇。</p>
+                            <a href="storytelling.html" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
+                        </div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_2_title">親子手語故事屋</h3>
-                        <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_2_desc">透過繪本共讀活動，讓聾聽孩童在故事中相遇。</p>
-                        <a href="storytelling.html" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
-                    </div>
-                </div>
 
-                <div class="program-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="image/lRmnVa.jpg" alt="International Sign Day" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-500">Event</div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_3_title">國際手語日倡議</h3>
-                        <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_3_desc">走入街頭與校園，結合快閃活動與展覽。</p>
-                        <a href="#" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
+                    <div class="program-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="image/lRmnVa.jpg" alt="International Sign Day" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-500">Event</div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="proj_3_title">國際手語日倡議</h3>
+                            <p class="text-gray-600 mb-6 line-clamp-3" data-i18n="proj_3_desc">走入街頭與校園，結合快閃活動與展覽。</p>
+                            <a href="#" class="text-gray-900 font-bold text-sm border-b-2 border-rose-200 hover:border-rose-500 transition-colors pb-1" data-i18n="proj_link">了解更多</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <div id="footer-placeholder"></div>
 
