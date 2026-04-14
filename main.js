@@ -135,8 +135,25 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            // 當區塊進入畫面：開始跑動畫
+            // 當區塊進入畫面：開始跑數字動畫
             animateCounters();
+            
+            // --- 🌟 新增：果凍彈出動畫 (加入骨牌般的時間差) ---
+            const counters = document.querySelectorAll('.counter-value');
+            counters.forEach((counter, index) => {
+                // 移除初始隱藏狀態
+                counter.classList.remove('opacity-0-init');
+                
+                // 重新觸發 CSS 動畫的必備技巧 (強制瀏覽器重繪)
+                counter.style.animation = 'none';
+                void counter.offsetWidth; 
+                counter.style.animation = ''; 
+                
+                // 第一個延遲 0s，第二個延遲 0.1s... 創造連續彈出效果
+                counter.style.animationDelay = `${index * 0.1}s`;
+                counter.classList.add('animate-jelly');
+            });
+
         } else {
             // 當區塊離開畫面：強制歸零，準備下一次進場
             const counters = document.querySelectorAll('.counter-value');
@@ -144,7 +161,12 @@ const observer = new IntersectionObserver((entries) => {
                 const prefix = counter.getAttribute('data-prefix') || '';
                 counter.innerText = prefix + "0";
                 
-                // 同時把還沒跑完的動畫停掉，節省瀏覽器效能
+                // --- 🌟 新增：恢復初始隱藏狀態，準備下次果凍彈出 ---
+                counter.classList.add('opacity-0-init');
+                counter.classList.remove('animate-jelly');
+                counter.style.animationDelay = '0s';
+                
+                // 同時把還沒跑完的數字動畫停掉，節省瀏覽器效能
                 if (counter.animationTimeout) {
                     clearTimeout(counter.animationTimeout);
                 }
