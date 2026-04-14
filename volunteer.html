@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Today | Echo Sign</title>
+    <link rel="icon" href="image/echosign_logo_circle.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="antialiased overflow-x-hidden lang-zh flex flex-col min-h-screen bg-[#FDFBF7]">
+
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow">
+        <section class="relative h-[70vh] flex items-center justify-center overflow-hidden z-10">     
+            <img src="image/1741919556792.jpg" alt="Echo Sign Background" class="absolute inset-0 w-full h-full object-cover z-0 blur-sm scale-105">         
+            <div class="absolute inset-0 bg-rose-200/70 z-10"></div>            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">                
+                <h1 class="text-6xl sm:text-8xl lg:text-8xl font-medium text-white leading-tight tracking-tight [text-shadow:_0_4px_24px_rgb(0_0_0_/_50%)]" data-i18n="vol_hero_title_plain">
+                    小手傳愛，<br>手語無礙
+                </h1>                
+                <p class="text-lg md:text-xl text-white mt-12 leading-relaxed max-w-3xl mx-auto [text-shadow:_0_2px_12px_rgb(0_0_0_/_80%)]" data-i18n="vol_hero_subtitle_plain">
+                    Echo Sign是由熱忱的青年志工組成，致力於透過創新的手語教學與繪本故事打破聾聽間的溝通隔閡，打造聾聽共融的世界！誠摯邀請充滿熱忱的你加入，與 Megan 一起小手傳愛！
+                </p>
+            </div>
+        </section>
+
+        <section id="impact" class="py-16 bg-rose-50/50 border-y border-rose-100 z-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+                    
+                    <div class="w-full lg:w-2/5 text-center lg:text-left space-y-6 lg:pr-10">
+                        <h2 class="text-4xl lg:text-5xl font-semibold text-gray-800 leading-tight" data-i18n="vol_impact_title">準備好發揮你的<br>影響力了嗎？</h2>
+                        <p class="text-lg lg:text-xl text-gray-600 leading-relaxed" data-i18n="vol_impact_desc">
+                            成為 Echo Sign 志工，加入充滿創意與同理心的社群。你將學會如何用手語講故事，與聽障家庭建立聯繫，並在這過程中成長為有愛心與領導力的變革者！
+                        </p>
+                    </div>
+
+                    <div class="w-full lg:w-3/5">
+                        <img src="image/FB_IMG_1732163927123.jpg" alt="Megan 志工" class="w-full rounded-3xl shadow-xl border-4 border-rose-50/50 object-cover">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-[#FDFBF7] z-20 relative">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
+
+                <div id="step-1" class="scroll-mt-24 text-center">
+                    <h2 class="text-4xl font-extrabold text-rose-500 mb-4" data-i18n="step1_title">Step 1: 選擇報名組別</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12 font-medium" data-i18n="step1_desc">
+                        加入我們，成為 Echo Sign 志工！您可以選擇加入活動組或募款組。
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div class="bg-white rounded-3xl p-6 shadow-md border border-rose-100 hover:shadow-xl transition-shadow text-left">
+                            <div class="aspect-video w-full rounded-2xl overflow-hidden mb-6 bg-rose-50">
+                                <img src="image/459006609_948416540660220_9184869203452097215_n.jpg" alt="Storytelling" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3" data-i18n="step1_card1_title">活動組</h3>
+                            <p class="text-gray-600 font-medium" data-i18n="step1_card1_desc">
+                                由 Grace Chu 帶領活動策劃。協助各類活動，像是參與雙語互動故事屋、創意手作與感官體驗、個別輔導與深度交流及手語圖卡專案等活動。
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-3xl p-6 shadow-md border border-rose-100 hover:shadow-xl transition-shadow text-left flex flex-col">
+                            <div class="aspect-video w-full rounded-2xl overflow-hidden mb-6 bg-orange-50 flex items-center justify-center gap-4 flex-wrap p-4">
+                                <div class="p-4 bg-white rounded-2xl shadow-sm"><i data-lucide="users" class="w-10 h-10 text-rose-400"></i></div>
+                                <div class="p-4 bg-white rounded-2xl shadow-sm"><i data-lucide="handshake" class="w-10 h-10 text-orange-400"></i></div>
+                                <div class="p-4 bg-white rounded-2xl shadow-sm"><i data-lucide="megaphone" class="w-10 h-10 text-yellow-400"></i></div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3" data-i18n="step1_card2_title">募款組</h3>
+                            <p class="text-gray-600 font-medium flex-grow" data-i18n="step1_card2_desc">
+                                由  Cameron & Dylan 一同推動募款。募集運作資源、建立合作夥伴關係，並提升社會對聽障社群的關注。
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div id="step-2" class="scroll-mt-24 text-center">
+                    <h2 class="text-4xl font-extrabold text-orange-500 mb-10" data-i18n="step2_title">Step 2: 填寫表單</h2>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSebUD7LPDo4uwvuBNG1Sc69_scz2AjKn8hLfn5DTRZGNM_txA/viewform" target="_blank" class="inline-block w-full max-w-md bg-gradient-to-r from-[#FF8C94] to-[#FFB6B9] hover:from-[#FF707A] hover:to-[#FF9EA3] text-white px-8 py-5 rounded-full text-xl font-bold shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all mb-12" data-i18n="step1_btn">
+                        填寫志工報名表單
+                    </a>                        
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto font-medium" data-i18n="step2_desc">
+                        送出申請後請耐心等待，我們將在 2-3 個工作天內與你聯絡。
+                    </p>
+                </div>
+
+                <div class="text-center pb-10">
+                    <h2 class="text-4xl font-extrabold text-yellow-500 mb-6" data-i18n="step3_title">Step 3: 開始行動</h2>                    
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-16 font-medium" data-i18n="step3_desc">
+                        這是一個自我成長、回饋社會的絕佳機會，讓我們一起 Echo 愛，為聾聽共融而努力！ :)
+                    </p>
+                    <div class="max-w-xl mx-auto relative group">                  
+                        <div class="relative">
+                            <img src="image/1704693665544.jpg" alt="Echo Sign Volunteers" class="w-full rounded-3xl shadow-xl border-4 border-rose-50/50 object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-gray-100">
+                    <p class="text-gray-500 flex items-center justify-center gap-2">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <span data-i18n="volunteer_contact">如有任何疑問，請聯繫：Echosignn29@gmail.com</span>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="language.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

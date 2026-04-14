@@ -196,6 +196,24 @@ const translations = {
         story_page_title:"樹屋故事時間",
         story_page_desc:"這裡有我們最新製作的雙語教案！這些簡報專為聽障家庭設計，每次能提供 1-2 小時的互動故事體驗，同時幫助孩子們學習基礎英文單字。",
         open_slides: "開啟投影片",
+
+        // --- volunteer ---
+        vol_hero_title_plain: "小手傳愛，<br>手語無礙",
+        vol_hero_subtitle_plain: "Echo Sign是由熱忱的青年志工組成，致力於透過創新的手語教學與繪本故事打破聾聽間的溝通隔閡，打造聾聽共融的世界！誠摯邀請充滿熱忱的你加入，與 Megan 一起小手傳愛！",
+        vol_impact_title: "準備好發揮你的<br>影響力了嗎？",
+        vol_impact_desc: "成為 Echo Sign 志工，加入充滿創意與同理心的社群。你將學會如何用手語講故事，與聽障家庭建立聯繫，並在這過程中成長為有愛心與領導力的變革者！",
+        step1_title: "Step 1: 選擇報名組別",
+        step1_desc: "加入我們，成為 Echo Sign 志工！您可以選擇加入活動組或募款組。",
+        step1_card1_title: "活動組",
+        step1_card1_desc: "由 Grace Chu 帶領活動策劃。協助各類活動，像是參與雙語互動故事屋、創意手作與感官體驗、個別輔導與深度交流及手語圖卡專案等活動。",
+        step1_card2_title: "募款組",
+        step1_card2_desc: "由 Cameron & Dylan 一同推動募款。募集運作資源、建立合作夥伴關係，並提升社會對聽障社群的關注。",
+        step2_title: "Step 2: 填寫表單",
+        step1_btn: "填寫志工報名表單",
+        step2_desc: "送出申請後請耐心等待，我們將在 2-3 個工作天內與你聯絡。",
+        step3_title: "Step 3: 開始行動",
+        step3_desc: "這是一個自我成長、回饋社會的絕佳機會，讓我們一起 Echo 愛，為聾聽共融而努力！ :)",
+        volunteer_contact: "如有任何疑問，請聯繫：Echosignn29@gmail.com"
     },
     en: {
         // --- Navigation & Footer ---
@@ -403,5 +421,23 @@ const translations = {
         story_page_title:"Treehouse story time sessions",
         story_page_desc:"Here are our latest lesson plans! These slides are made and planned with care to deliver a 1-2 hour interactive story session for hearing impaired families and at the same time help children learn basic English vocabulary!",
         open_slides: "Open Slides",
+
+        // --- volunteer ---
+        vol_hero_title_plain: "Spread Love, Hands in Harmony",
+        vol_hero_subtitle_plain: "Echo Sign is a passionate youth volunteer team dedicated to breaking communication barriers through creative sign language teaching and picture books. We invite you to join us and Megan to spread love and echo inclusion!",
+        vol_impact_title: "Ready to Make<br>an Impact?",
+        vol_impact_desc: "Join Echo Sign to become part of a creative and empathetic community. You'll learn sign language storytelling, connect with deaf families, and grow as a leader and changemaker!",
+        step1_title: "Step 1: Choose Your Team",
+        step1_desc: "Join Echo Sign! You can choose to join either the Events Team or the Fundraising Team.",
+        step1_card1_title: "Events Team",
+        step1_card1_desc: "Led by Grace Chu. You'll help plan interactive storytelling sessions, arts and crafts workshops, 1-on-1 tutoring, and our sign language flashcard project.",
+        step1_card2_title: "Fundraising Team",
+        step1_card2_desc: "Led by Cameron & Dylan. You'll help raise resources, build partnerships, and raise awareness for the hearing impaired community.",
+        step2_title: "Step 2: Fill Out the Form",
+        step1_btn: "Volunteer Registration Form",
+        step2_desc: "After submitting your application, please wait 2-3 business days for us to contact you.",
+        step3_title: "Step 3: Take Action",
+        step3_desc: "This is a great opportunity for self-growth and giving back. Let's echo love together for a more inclusive world! :)",
+        volunteer_contact: "For any inquiries, please contact: Echosignn29@gmail.com",
     }
 };
