@@ -74,6 +74,8 @@ async function loadComponents() {
         document.getElementById('header-placeholder').innerHTML = headerHtml;
         document.getElementById('footer-placeholder').innerHTML = footerHtml;
 
+        initMobileMenu();
+
         // 初始化 Lucide 圖示
         if (window.lucide) {
             lucide.createIcons();
@@ -84,6 +86,68 @@ async function loadComponents() {
     } catch (err) {
         console.error('EchoSign 組件載入失敗:', err);
     }
+}
+
+function initMobileMenu() {
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('menu-overlay');
+
+    if (!menuBtn || !mobileMenu || !overlay) return;
+
+    const openMenu = () => {
+        mobileMenu.classList.remove('translate-x-full', 'invisible');
+        mobileMenu.classList.add('translate-x-0');
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+        overlay.classList.add('opacity-100', 'pointer-events-auto');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = () => {
+        mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
+        overlay.classList.remove('opacity-100', 'pointer-events-auto');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            if (mobileMenu.classList.contains('translate-x-full')) {
+                mobileMenu.classList.add('invisible');
+            }
+        }, 300);
+    };
+
+    // 使用 onclick 確保不會重複綁定
+    menuBtn.onclick = openMenu;
+    if (closeBtn) closeBtn.onclick = closeMenu;
+    overlay.onclick = closeMenu;
+
+    // 處理側邊欄三角形點擊邏輯
+    const dropdownBtns = mobileMenu.querySelectorAll('.dropdown-toggle-btn');
+    dropdownBtns.forEach(btn => {
+        btn.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const parent = btn.closest('.mobile-dropdown');
+            const content = parent.querySelector('.dropdown-content');
+            const icon = btn.querySelector('svg') || btn.querySelector('i'); // 抓取圖示實體
+            
+            if (content.classList.contains('hidden')) {
+                // 展開
+                content.classList.remove('hidden');
+                if (icon) {
+                    icon.style.transform = 'rotate(90deg)'; // 強制旋轉 90 度
+                }
+            } else {
+                // 收合
+                content.classList.add('hidden');
+                if (icon) {
+                    icon.style.transform = 'rotate(0deg)'; // 轉回來
+                }
+            }
+        };
+    });
 }
 
 // 監聽 DOM 載入完成事件

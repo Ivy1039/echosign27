@@ -48,10 +48,55 @@
 
                 <a href="donate.html" class="hidden md:inline-flex gradient-btn text-white px-6 py-2 rounded-full font-medium shadow-md" data-i18n="nav_donate">立即支持</a>
                 
-                <div class="md:hidden flex items-center">
-                    <i data-lucide="menu" class="w-6 h-6 text-gray-600"></i>
-                </div>
+                <!-- 手機版 -->
+                <button id="menu-btn" class="lg:hidden text-gray-600 focus:outline-none">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
             </div>
         </div>
     </div>
 </nav>
+
+
+<!-- 手機版 -->
+<div id="mobile-menu" class="fixed inset-y-0 right-0 w-64 bg-white shadow-2xl z-[70] transform translate-x-full invisible transition-all duration-300 ease-in-out lg:hidden">
+    <div class="flex flex-col h-full bg-white">
+        <div class="flex justify-end p-6">
+            <button id="close-menu" class="text-gray-500 hover:text-rose-500">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <nav class="flex flex-col px-6 space-y-2 overflow-y-auto">
+            <div class="mobile-dropdown border-b border-gray-50">
+                <div class="flex items-center justify-between p-3">
+                    <a href="index.html" class="text-gray-700 font-light text-lg" data-i18n="nav_home">首頁</a>
+                    <button class="dropdown-toggle-btn p-2 text-gray-400">
+                        <i data-lucide="chevron-right" class="w-4 h-4 transition-transform duration-300"></i>
+                    </button>
+                </div>
+                <div class="dropdown-content hidden pl-6 space-y-1 bg-gray-50/50 rounded-lg mx-2">
+                    <a href="timeline.html" class="block p-3 text-gray-500 font-light text-base" data-i18n="nav_timeline">發展歷程</a>
+                    <a href="ourteam.html" class="block p-3 text-gray-500 font-light text-base" data-i18n="nav_team">團隊夥伴</a>
+                </div>
+            </div>
+
+            <div class="mobile-dropdown border-b border-gray-50">
+                <div class="flex items-center justify-between p-3">
+                    <a href="programs.html" class="text-gray-700 font-light text-lg" data-i18n="nav_programs">專案計畫</a>
+                    <button class="dropdown-toggle-btn p-2 text-gray-400">
+                        <i data-lucide="chevron-right" class="w-4 h-4 transition-transform duration-300"></i>
+                    </button>
+                </div>
+                <div class="dropdown-content hidden pl-6 space-y-1 bg-gray-50/50 rounded-lg mx-2">
+                    <a href="storytelling.html" class="block p-3 text-gray-500 font-light text-base" data-i18n="nav_storytelling">樹屋故事時間</a>
+                </div>
+            </div>
+
+            <a href="volunteer.html" class="p-3 text-gray-700 font-light text-lg border-b border-gray-50" data-i18n="nav_volunteer">加入我們</a>
+            <a href="donate.html" class="p-3 text-gray-700 font-light text-lg border-b border-gray-50" data-i18n="nav_donate">立即支持</a>
+        </nav>
+    </div>
+</div>
+
+<div id="menu-overlay" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-[65] lg:hidden"></div>
