@@ -9,7 +9,7 @@ const translations = {
         nav_about: "關於我們",
         nav_timeline: "發展歷程",
         nav_team: "團隊夥伴",
-        nav_storytelling: "說故事節目",
+        nav_storytelling: "樹屋故事時間",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
 
         // --- 首頁 (Index Page) ---
