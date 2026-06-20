@@ -10,6 +10,7 @@ const translations = {
         nav_timeline: "發展歷程",
         nav_team: "團隊夥伴",
         nav_storytelling: "樹屋故事時間",
+        nav_impact:"影響力",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
 
         // --- 首頁 (Index Page) ---
@@ -225,6 +226,7 @@ const translations = {
         nav_timeline: "Timeline",
         nav_team: "Our Team",
         nav_storytelling: "Storytelling Program",
+        nav_impact:"impact",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
         
 
