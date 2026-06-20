@@ -11,6 +11,8 @@ const translations = {
         nav_team: "團隊夥伴",
         nav_storytelling: "樹屋故事時間",
         nav_impact:"影響力",
+        nav_card_publish:"卡牌發行計畫",
+        nav_CATES:"CATES 學生領袖會議",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
 
         // --- 首頁 (Index Page) ---
@@ -227,6 +229,8 @@ const translations = {
         nav_team: "Our collaborators",
         nav_storytelling: "Storytelling Program",
         nav_impact:"impact",
+        nav_card_publish:"Card set publication project",
+        nav_CATES:"CATES student leaders conference",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
         
 
