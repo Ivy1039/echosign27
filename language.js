@@ -11,9 +11,9 @@ const translations = {
         nav_team: "團隊夥伴",
         nav_impact:"影響力",
         nav_collaborators:"合作夥伴",
-        nav_storytelling: "樹屋故事時間",
-        nav_card_publish:"卡牌發行計畫",
-        nav_CATES:"CATES 學生領袖會議",
+        nav_storytelling: "親子手語故事屋",
+        nav_card_publish:"嬰幼兒手語溝通圖卡",
+        nav_CATES:"CATES 學生領導論壇",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
 
         // --- 首頁 (Index Page) ---
@@ -61,12 +61,9 @@ const translations = {
         // --- 專案計畫頁面 (Programs Page) ---
         programs_title: "我們如何傳遞愛",
         programs_subtitle: "從手語教學到社群倡議，探索 Echo Sign 的核心計畫。",
-        proj_1_title: "手語圖卡計畫",
-        proj_1_desc: "將日常詞彙轉化為精美圖卡，在社群媒體上引起迴響。",
-        proj_2_title: "親子手語故事屋",
-        proj_2_desc: "透過繪本共讀活動，讓聾聽孩童在故事中相遇。",
-        proj_3_title: "國際手語日倡議",
-        proj_3_desc: "走入街頭與校園，結合快閃活動與展覽。",
+        proj_1_desc: "透過繪本共讀活動，讓聾聽孩童在故事中相遇。",
+        proj_2_desc: "將日常詞彙轉化為精美圖卡，發送給弱勢嬰幼兒，在社群媒體上引起迴響。",
+        proj_3_desc: "CATES 是匯聚全台國際學校學生的青年領袖論壇，旨在推動跨校交流與社會參與",
         proj_link: "了解更多",
 
         // --- 團隊夥伴 ---
@@ -200,7 +197,7 @@ const translations = {
         collaborators_title:"合作夥伴",
 
         // --- storytelling ---
-        story_page_title:"樹屋故事時間",
+        story_page_title:"親子手語故事屋",
         story_page_desc:"這裡有我們最新製作的雙語教案！這些簡報專為聽障家庭設計，每次能提供 1-2 小時的互動故事體驗，同時幫助孩子們學習基礎英文單字。",
         open_slides: "開啟投影片",
 
@@ -233,7 +230,7 @@ const translations = {
         nav_team: "Our Team",
         nav_impact:"Impacts",
         nav_collaborators:"Our Collaborators",
-        nav_storytelling: "Storytelling Program",
+        nav_storytelling: "Storytelling Sessions",
         nav_card_publish:"Card Set Publication Project",
         nav_CATES:"CATES Student Leaders Conference",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
@@ -292,12 +289,9 @@ const translations = {
         // --- Programs Page ---
         programs_title: "Our Programs",
         programs_subtitle: "From sign language education to community initiatives, explore Echo Sign's core programs.",
-        proj_1_title: "Sign Language Flashcards",
-        proj_1_desc: "Transforming daily vocabulary into beautiful flashcards, making learning sign language easy.",
-        proj_2_title: "Storytelling Sessions",
-        proj_2_desc: "Through picture book reading events, deaf and hearing children meet in stories.",
-        proj_3_title: "Int'l Sign Day Initiative",
-        proj_3_desc: "Walking into streets and campuses with flash mobs and exhibitions to raise awareness.",
+        proj_1_desc: "Through picture book reading events, deaf and hearing children meet in stories.",
+        proj_2_desc: "Transforming everyday vocabulary into flashcards and distributing them to underprivileged infants and toddlers.",
+        proj_3_desc: "A youth leadership and social impact forum for international school students in Taiwan.",
         proj_link: "Learn More",
         
         // --- Our Team ---
