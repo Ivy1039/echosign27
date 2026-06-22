@@ -234,8 +234,8 @@ const translations = {
         nav_impact:"Impacts",
         nav_collaborators:"Our Collaborators",
         nav_storytelling: "Storytelling Program",
-        nav_card_publish:"Card set publication project",
-        nav_CATES:"CATES student leaders conference",
+        nav_card_publish:"Card Set Publication Project",
+        nav_CATES:"CATES Student Leaders Conference",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
         
 
@@ -432,7 +432,7 @@ const translations = {
         collaborators_title:"Our Collaborators",
     
         // --- storytelling ---
-        story_page_title:"Treehouse story time sessions",
+        story_page_title:"Treehouse Story Time Sessions",
         story_page_desc:"Here are our latest lesson plans! These slides are made and planned with care to deliver a 1-2 hour interactive story session for hearing impaired families and at the same time help children learn basic English vocabulary!",
         open_slides: "Open Slides",
 
