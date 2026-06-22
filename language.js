@@ -196,6 +196,9 @@ const translations = {
         t25_13_title: "DreamGolf 高爾夫體驗日",
         t25_13_desc: "<p>與 DreamGolf 成為合作夥伴，為聽障家庭舉辦了一場免費的高爾夫歡樂體驗日。</p>",
 
+        // --- collaborators ---
+        collaborators_title:"合作夥伴",
+
         // --- storytelling ---
         story_page_title:"樹屋故事時間",
         story_page_desc:"這裡有我們最新製作的雙語教案！這些簡報專為聽障家庭設計，每次能提供 1-2 小時的互動故事體驗，同時幫助孩子們學習基礎英文單字。",
@@ -424,6 +427,9 @@ const translations = {
         t25_13_date: "August 16, 2025",
         t25_13_title: "DreamGolf Fun Day",
         t25_13_desc: "<p>Partnered with DreamGolf hosting a free golf fun day experience for hearing impaired families.</p>",
+
+        // --- collaborators ---
+        collaborators_title:"Our Collaborators",
     
         // --- storytelling ---
         story_page_title:"Treehouse story time sessions",
