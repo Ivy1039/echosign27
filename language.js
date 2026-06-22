@@ -232,7 +232,7 @@ const translations = {
         nav_timeline: "Our Story",
         nav_team: "Our Team",
         nav_impact:"Impacts",
-        nav_collaborators:"Our collaborators",
+        nav_collaborators:"Our Collaborators",
         nav_storytelling: "Storytelling Program",
         nav_card_publish:"Card set publication project",
         nav_CATES:"CATES student leaders conference",
