@@ -202,10 +202,12 @@ const translations = {
         open_slides: "開啟投影片",
 
         // --- CATES ---
-        cates_page_desc: `<p>Echo Sign 很榮幸能夠參與籌辦 2026 CATES 學生領袖會議，在這個一年一度的週末營隊，匯聚了來自全台各校 300–400 位有志成為領袖與改變者的學生。</p>
-            <p>CATES 創立於 2025 年，是一個由學生主導、每年由不同學校輪流主辦的會議。透過主題演講、互動工作坊、團隊合作活動以及年度 Shark Tank 提案競賽，讓學生們齊聚一堂交流想法、培養實用的領導能力，並將改變的想法化為行動。</p>
-            <p>CATES 的核心信念是：領導力不取決於頭銜或職位，它展現在教室、社區、對話以及各式各樣的課外活動中。藉由打造一個讓年輕人向資深與新興學生領袖學習的空間，CATES 希望讓參與者看見學生們已經能夠成就的事——並激勵他們走得更遠。</p>
-            <p>每位參與者離開時，帶走的不只是新技能與人脈，更是對自身領導、貢獻與創造改變能力的更深認識。</p>`,
+        cates_p1: "Echo Sign 很榮幸能夠參與籌辦 2026 CATES 學生領袖會議，在這個一年一度的週末營隊，匯聚了來自全台各校 300–400 位有志成為領袖與改變者的學生。",
+        cates_p2: "CATES 創立於 2025 年，是一個由學生主導、每年由不同學校輪流主辦的會議。透過主題演講、互動工作坊、團隊合作活動以及年度 Shark Tank 提案競賽，讓學生們齊聚一堂交流想法、培養實用的領導能力，並將改變的想法化為行動。",
+        cates_p3: "CATES 的核心信念是：領導力不取決於頭銜或職位，它展現在教室、社區、對話以及各式各樣的課外活動中。藉由打造一個讓年輕人向資深與新興學生領袖學習的空間，CATES 希望讓參與者看見學生們已經能夠成就的事——並激勵他們走得更遠。",
+        cates_p4: "每位參與者離開時，帶走的不只是新技能與人脈，更是對自身領導、貢獻與創造改變能力的更深認識。",
+        cates_hero_sub: "2026 年度學生領袖週末營",
+        cates_gallery_title: "活動花絮",
 
         // --- volunteer ---
         vol_hero_title_plain: "小手傳愛，<br>手語無礙",
@@ -437,10 +439,12 @@ const translations = {
         open_slides: "Open Slides",
 
         // --- CATES ---
-        cates_page_desc: `<p>EchoSign was proud to collaborate in organizing the 2026 CATES Student Leadership Conference, an annual weekend retreat bringing together 300–400 aspiring student leaders and changemakers from schools across Taiwan.</p>
-            <p>Founded in 2025, CATES is a student-led conference hosted by a rotating school each year. Through keynote speeches, interactive workshops, collaborative activities, and the annual Shark Tank pitch competition, students come together to exchange ideas, develop practical leadership skills, and transform their ideas for change into action.</p>
-            <p>At the heart of CATES is the belief that leadership does not depend on a title or position. It manifests itself in classrooms, communities, conversations, and a wide range of co-curricular activities. By creating a space where young people can learn from both established and emerging student leaders, CATES aims to show attendees what students are already capable of accomplishing—and empower them to reach even further.</p>
-            <p>Every participant leaves not only with new skills and connections, but with a greater sense of their own capacity to lead, contribute, and create meaningful change.</p>`,
+        cates_p1: "EchoSign was proud to collaborate in organizing the 2026 CATES Student Leadership Conference, an annual weekend retreat bringing together 300–400 aspiring student leaders and changemakers from schools across Taiwan.",
+        cates_p2: "Founded in 2025, CATES is a student-led conference hosted by a rotating school each year. Through keynote speeches, interactive workshops, collaborative activities, and the annual Shark Tank pitch competition, students come together to exchange ideas, develop practical leadership skills, and transform their ideas for change into action.",
+        cates_p3: "At the heart of CATES is the belief that leadership does not depend on a title or position. It manifests itself in classrooms, communities, conversations, and a wide range of co-curricular activities. By creating a space where young people can learn from both established and emerging student leaders, CATES aims to show attendees what students are already capable of accomplishing—and empower them to reach even further.",
+        cates_p4: "Every participant leaves not only with new skills and connections, but with a greater sense of their own capacity to lead, contribute, and create meaningful change.",
+        cates_hero_sub: "The 2026 Annual Student Leadership Retreat",
+        cates_gallery_title: "Moments from CATES",
 
         // --- volunteer ---
         vol_hero_title_plain: "Spread Love, Hands in Harmony",
