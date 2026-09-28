@@ -9,14 +9,18 @@ const translations = {
         nav_about: "關於我們",
         nav_timeline: "發展歷程",
         nav_team: "團隊夥伴",
-        nav_storytelling: "說故事節目",
+        nav_impact:"影響力",
+        nav_collaborators:"合作夥伴",
+        nav_storytelling: "親子手語故事屋",
+        nav_card_publish:"嬰幼兒手語溝通圖卡",
+        nav_CATES:"CATES 學生領袖會議",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
 
         // --- 首頁 (Index Page) ---
         hero_badge: "青年領軍的聾聽共融計畫",
         hero_title_1: "讓每一份表達",
         hero_title_2: "都被",
-        hero_title_highlight: "溫柔聽見",
+        hero_title_highlight: "聽見",
         hero_desc: "Echo Sign 致力於打破溝通隔閡。我們透過手語圖卡與繪本，搭建聾聽之間的橋樑，創造一個無障礙的溫暖世界。",
         hero_cta_primary: "支持我們",
         hero_cta_secondary: "了解更多",
@@ -57,12 +61,9 @@ const translations = {
         // --- 專案計畫頁面 (Programs Page) ---
         programs_title: "我們如何傳遞愛",
         programs_subtitle: "從手語教學到社群倡議，探索 Echo Sign 的核心計畫。",
-        proj_1_title: "手語圖卡計畫",
-        proj_1_desc: "將日常詞彙轉化為精美圖卡，在社群媒體上引起迴響。",
-        proj_2_title: "親子手語故事屋",
-        proj_2_desc: "透過繪本共讀活動，讓聾聽孩童在故事中相遇。",
-        proj_3_title: "國際手語日倡議",
-        proj_3_desc: "走入街頭與校園，結合快閃活動與展覽。",
+        proj_1_desc: "透過繪本共讀活動，讓聾聽孩童在故事中相遇。",
+        proj_2_desc: "將日常詞彙轉化為精美圖卡，發送給弱勢嬰幼兒，在社群媒體上引起迴響。",
+        proj_3_desc: "CATES 是匯聚全台國際學校學生的青年領袖會議，旨在推動跨校交流與社會參與",
         proj_link: "了解更多",
 
         // --- 團隊夥伴 ---
@@ -192,10 +193,21 @@ const translations = {
         t25_13_title: "DreamGolf 高爾夫體驗日",
         t25_13_desc: "<p>與 DreamGolf 成為合作夥伴，為聽障家庭舉辦了一場免費的高爾夫歡樂體驗日。</p>",
 
+        // --- collaborators ---
+        collaborators_title:"合作夥伴",
+
         // --- storytelling ---
-        story_page_title:"樹屋故事時間",
+        story_page_title:"親子手語故事屋",
         story_page_desc:"這裡有我們最新製作的雙語教案！這些簡報專為聽障家庭設計，每次能提供 1-2 小時的互動故事體驗，同時幫助孩子們學習基礎英文單字。",
         open_slides: "開啟投影片",
+
+        // --- CATES ---
+        cates_p1: "Echo Sign 很榮幸能夠參與籌辦 2026 CATES 學生領袖會議，在這個一年一度的週末營隊，匯聚了來自全台各校 300–400 位有志成為領袖與改變者的學生。",
+        cates_p2: "CATES 創立於 2025 年，是一個由學生主導、每年由不同學校輪流主辦的會議。透過主題演講、互動工作坊、團隊合作活動以及年度 Shark Tank 提案競賽，讓學生們齊聚一堂交流想法、培養實用的領導能力，並將改變的想法化為行動。",
+        cates_p3: "CATES 的核心信念是：領導力不取決於頭銜或職位，它展現在教室、社區、對話以及各式各樣的課外活動中。藉由打造一個讓年輕人向資深與新興學生領袖學習的空間，CATES 希望讓參與者看見學生們已經能夠成就的事——並激勵他們走得更遠。",
+        cates_p4: "每位參與者離開時，帶走的不只是新技能與人脈，更是對自身領導、貢獻與創造改變能力的更深認識。",
+        cates_hero_sub: "2026 年度學生領袖週末營",
+        cates_gallery_title: "活動花絮",
 
         // --- volunteer ---
         vol_hero_title_plain: "小手傳愛，<br>手語無礙",
@@ -222,16 +234,20 @@ const translations = {
         nav_volunteer: "Volunteer Today",
         nav_donate: "Donate",
         nav_about:"About Us",
-        nav_timeline: "Timeline",
+        nav_timeline: "Our Story",
         nav_team: "Our Team",
-        nav_storytelling: "Storytelling Program",
+        nav_impact:"Impacts",
+        nav_collaborators:"Our Collaborators",
+        nav_storytelling: "Storytelling Sessions",
+        nav_card_publish:"Card Set Publication Project",
+        nav_CATES:"CATES Student Leadership Conference",
         footer_rights: "© 2025 Echo Sign. All rights reserved.",
         
 
         // --- Index Page ---
         hero_badge: "Youth-Led Initiative for Inclusion",
         hero_title_1: "Let Every Expression",
-        hero_title_2: "Be Gently ",
+        hero_title_2: "Be ",
         hero_title_highlight: "Heard",
         hero_desc: "Echo Sign is dedicated to breaking communication barriers. We build bridges between the deaf and hearing communities through sign language flashcards and picture books.",
         hero_cta_primary: "Donate",
@@ -281,12 +297,9 @@ const translations = {
         // --- Programs Page ---
         programs_title: "Our Programs",
         programs_subtitle: "From sign language education to community initiatives, explore Echo Sign's core programs.",
-        proj_1_title: "Sign Language Flashcards",
-        proj_1_desc: "Transforming daily vocabulary into beautiful flashcards, making learning sign language easy.",
-        proj_2_title: "Storytelling Sessions",
-        proj_2_desc: "Through picture book reading events, deaf and hearing children meet in stories.",
-        proj_3_title: "Int'l Sign Day Initiative",
-        proj_3_desc: "Walking into streets and campuses with flash mobs and exhibitions to raise awareness.",
+        proj_1_desc: "Through picture book reading events, deaf and hearing children meet in stories.",
+        proj_2_desc: "Transforming everyday vocabulary into flashcards and distributing them to underprivileged infants and toddlers.",
+        proj_3_desc: "A youth leadership and social impact conference for international school students in Taiwan.",
         proj_link: "Learn More",
         
         // --- Our Team ---
@@ -416,11 +429,22 @@ const translations = {
         t25_13_date: "August 16, 2025",
         t25_13_title: "DreamGolf Fun Day",
         t25_13_desc: "<p>Partnered with DreamGolf hosting a free golf fun day experience for hearing impaired families.</p>",
+
+        // --- collaborators ---
+        collaborators_title:"Our Collaborators",
     
         // --- storytelling ---
-        story_page_title:"Treehouse story time sessions",
+        story_page_title:"Treehouse Story Time Sessions",
         story_page_desc:"Here are our latest lesson plans! These slides are made and planned with care to deliver a 1-2 hour interactive story session for hearing impaired families and at the same time help children learn basic English vocabulary!",
         open_slides: "Open Slides",
+
+        // --- CATES ---
+        cates_p1: "EchoSign was proud to collaborate in organizing the 2026 CATES Student Leadership Conference, an annual weekend retreat bringing together 300–400 aspiring student leaders and changemakers from schools across Taiwan.",
+        cates_p2: "Founded in 2025, CATES is a student-led conference hosted by a rotating school each year. Through keynote speeches, interactive workshops, collaborative activities, and the annual Shark Tank pitch competition, students come together to exchange ideas, develop practical leadership skills, and transform their ideas for change into action.",
+        cates_p3: "At the heart of CATES is the belief that leadership does not depend on a title or position. It manifests itself in classrooms, communities, conversations, and a wide range of co-curricular activities. By creating a space where young people can learn from both established and emerging student leaders, CATES aims to show attendees what students are already capable of accomplishing—and empower them to reach even further.",
+        cates_p4: "Every participant leaves not only with new skills and connections, but with a greater sense of their own capacity to lead, contribute, and create meaningful change.",
+        cates_hero_sub: "The 2026 Annual Student Leadership Retreat",
+        cates_gallery_title: "Moments from CATES",
 
         // --- volunteer ---
         vol_hero_title_plain: "Spread Love, Hands in Harmony",

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATES Student Leadership Conference | Echo Sign</title>
+    <link rel="icon" href="image/echosign_logo_circle.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="antialiased overflow-x-hidden lang-zh bg-sky-50">
+
+    <div id="header-placeholder"></div>
+
+    <main class="bg-sky-50 relative overflow-hidden">
+        <div class="absolute top-40 -right-20 w-96 h-96 bg-sky-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
+        <div class="absolute top-[60rem] -left-20 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60"></div>
+
+        <!-- Hero -->
+        <section class="pt-28 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-7xl mx-auto relative rounded-[2rem] overflow-hidden shadow-2xl">
+                <img src="image/CATES/S__4857911_0.jpg" alt="CATES Organizing Committee" class="w-full h-[26rem] md:h-[34rem] object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+                    <span class="inline-block bg-white/90 text-sky-600 text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full mb-4">Our Programs · 2026</span>
+                    <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight" data-i18n="nav_CATES">CATES 學生領袖會議</h1>
+                    <p class="mt-3 text-lg md:text-xl text-sky-100" data-i18n="cates_hero_sub">2026 年度學生領袖週末營</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story -->
+        <section class="py-20 md:py-28 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-6xl mx-auto space-y-20 md:space-y-28">
+
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="cates_p1"></p>
+                    <img src="image/CATES/S__4857915_0.jpg" alt="CATES keynote" onclick="openPhoto(this.src)" class="w-full max-w-sm mx-auto aspect-[4/5] object-cover rounded-3xl shadow-xl cursor-zoom-in">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <div class="order-2 md:order-1 grid grid-cols-2 gap-4">
+                        <img src="image/CATES/S__4857906_0.jpg" alt="Shark Tank pitch" onclick="openPhoto(this.src)" class="col-span-2 w-full aspect-[3/2] object-cover rounded-3xl shadow-xl cursor-zoom-in">
+                        <img src="image/CATES/S__4857907_0.jpg" alt="CATES workshop" onclick="openPhoto(this.src)" class="w-full aspect-square object-cover rounded-2xl shadow-lg cursor-zoom-in">
+                        <img src="image/CATES/S__4857908_0.jpg" alt="CATES workshop" onclick="openPhoto(this.src)" class="w-full aspect-square object-cover rounded-2xl shadow-lg cursor-zoom-in">
+                    </div>
+                    <p class="order-1 md:order-2 text-lg text-gray-700 leading-relaxed" data-i18n="cates_p2"></p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="cates_p3"></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="image/CATES/S__4857910_0.jpg" alt="CATES session" onclick="openPhoto(this.src)" class="w-full aspect-[2/3] object-cover rounded-3xl shadow-xl cursor-zoom-in">
+                        <img src="image/CATES/S__4857914_0.jpg" alt="CATES speaker" onclick="openPhoto(this.src)" class="w-full aspect-[2/3] object-cover rounded-3xl shadow-xl cursor-zoom-in mt-10">
+                    </div>
+                </div>
+
+                <blockquote class="max-w-4xl mx-auto bg-white rounded-[2rem] shadow-lg px-8 py-12 md:px-16 text-center relative">
+                    <i data-lucide="quote" class="w-10 h-10 text-sky-300 mx-auto mb-4"></i>
+                    <p class="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed" data-i18n="cates_p4"></p>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="pb-24 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-10" data-i18n="cates_gallery_title">活動花絮</h2>
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-6">
+                    <img src="image/CATES/S__4857903_0.jpg" alt="CATES 2026" loading="lazy" onclick="openPhoto(this.src)" class="md:col-span-3 w-full aspect-[4/3] object-cover rounded-2xl shadow-md cursor-zoom-in hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                    <img src="image/CATES/S__4857904_0.jpg" alt="CATES 2026" loading="lazy" onclick="openPhoto(this.src)" class="md:col-span-3 w-full aspect-[4/3] object-cover rounded-2xl shadow-md cursor-zoom-in hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                    <img src="image/CATES/S__4857905_0.jpg" alt="CATES 2026" loading="lazy" onclick="openPhoto(this.src)" class="md:col-span-2 w-full aspect-[4/3] object-cover rounded-2xl shadow-md cursor-zoom-in hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                    <img src="image/CATES/S__4857909_0.jpg" alt="CATES 2026" loading="lazy" onclick="openPhoto(this.src)" class="md:col-span-2 w-full aspect-[4/3] object-cover rounded-2xl shadow-md cursor-zoom-in hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                    <img src="image/CATES/S__4857912_0.jpg" alt="CATES 2026" loading="lazy" onclick="openPhoto(this.src)" class="col-span-2 md:col-span-2 w-full aspect-[4/3] object-cover rounded-2xl shadow-md cursor-zoom-in hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="photo-modal" onclick="closePhoto()" class="fixed inset-0 z-[100] bg-black/80 hidden flex items-center justify-center backdrop-blur-md p-4 cursor-zoom-out">
+        <img id="photo-full" src="" alt="CATES 2026" class="max-w-full max-h-[90vh] rounded-2xl shadow-2xl">
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="language.js"></script>
+    <script src="main.js"></script>
+    <script>
+        function openPhoto(src) {
+            document.getElementById('photo-full').src = src;
+            document.getElementById('photo-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closePhoto() {
+            document.getElementById('photo-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
