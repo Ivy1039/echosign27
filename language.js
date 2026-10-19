@@ -198,6 +198,11 @@ const translations = {
 
         // --- storytelling ---
         story_page_title:"親子手語故事屋",
+        story_gallery_title:"故事屋活動花絮",
+        // story_cap_1~3 目前是預設文字，待換成照片說明
+        story_cap_1:"這裡有我們最新製作的雙語教案！這些簡報專為聽障家庭設計，每次能提供 1-2 小時的互動故事體驗，同時幫助孩子們學習基礎英文單字。",
+        story_cap_2:"這裡有我們最新製作的雙語教案！這些簡報專為聽障家庭設計，每次能提供 1-2 小時的互動故事體驗，同時幫助孩子們學習基礎英文單字。",
+        story_cap_3:"這裡有我們最新製作的雙語教案！這些簡報專為聽障家庭設計，每次能提供 1-2 小時的互動故事體驗，同時幫助孩子們學習基礎英文單字。",
         story_page_desc:"這裡有我們最新製作的雙語教案！這些簡報專為聽障家庭設計，每次能提供 1-2 小時的互動故事體驗，同時幫助孩子們學習基礎英文單字。",
         open_slides: "開啟投影片",
         close_reading: "關閉閱讀",
@@ -439,6 +444,11 @@ const translations = {
     
         // --- storytelling ---
         story_page_title:"Treehouse Story Time Sessions",
+        story_gallery_title:"Moments from Story Time",
+        // story_cap_1~3 目前是預設文字，待換成照片說明
+        story_cap_1:"Here are our latest lesson plans! These slides are made and planned with care to deliver a 1-2 hour interactive story session for hearing impaired families and at the same time help children learn basic English vocabulary!",
+        story_cap_2:"Here are our latest lesson plans! These slides are made and planned with care to deliver a 1-2 hour interactive story session for hearing impaired families and at the same time help children learn basic English vocabulary!",
+        story_cap_3:"Here are our latest lesson plans! These slides are made and planned with care to deliver a 1-2 hour interactive story session for hearing impaired families and at the same time help children learn basic English vocabulary!",
         story_page_desc:"Here are our latest lesson plans! These slides are made and planned with care to deliver a 1-2 hour interactive story session for hearing impaired families and at the same time help children learn basic English vocabulary!",
         open_slides: "Open Slides",
         close_reading: "Close",
