@@ -213,14 +213,36 @@
         </div>
     </section>
 
-    <div id="pdf-modal" class="fixed inset-0 z-[100] bg-black/80 hidden flex items-center justify-center backdrop-blur-md transition-opacity duration-300 opacity-0 p-4">
-        
-        <button onclick="closePDF()" class="absolute top-6 right-6 text-white hover:text-rose-400 transition-colors flex items-center gap-2 font-bold text-lg z-10">
-            <i data-lucide="x-circle" class="w-8 h-8"></i> 關閉閱讀
-        </button>
-        
-        <div class="w-full max-w-5xl h-[80vh] bg-white rounded-2xl overflow-hidden shadow-2xl relative">
-            <iframe id="pdf-frame" src="" class="w-full h-full border-0" title="PDF Viewer"></iframe>
+    <div id="pdf-modal" class="fixed inset-0 z-[100] bg-black/85 hidden flex-col backdrop-blur-md transition-opacity duration-300 opacity-0" onclick="if (event.target === this) closePDF()">
+
+        <div class="flex items-center justify-between gap-4 px-4 sm:px-6 py-3 text-white">
+            <span id="pdf-counter" class="font-bold tabular-nums text-lg min-w-[5rem]"></span>
+            <div class="flex items-center gap-2">
+                <button id="pdf-fullscreen-btn" onclick="toggleFullscreen()" class="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/15 transition-colors font-bold">
+                    <i data-lucide="maximize" class="w-5 h-5"></i>
+                    <span class="hidden sm:inline" data-i18n="fullscreen">全螢幕</span>
+                </button>
+                <button onclick="closePDF()" class="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/15 hover:text-rose-300 transition-colors font-bold">
+                    <i data-lucide="x-circle" class="w-6 h-6"></i>
+                    <span data-i18n="close_reading">關閉閱讀</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="pdf-stage" class="relative flex-1 min-h-0 flex items-center justify-center px-2 sm:px-20 pb-6 select-none" onclick="if (event.target === this) closePDF()">
+            <canvas id="pdf-canvas" class="max-w-full max-h-full rounded-xl shadow-2xl bg-white"></canvas>
+
+            <div id="pdf-loading" class="absolute inset-0 flex flex-col items-center justify-center gap-4 text-white pointer-events-none">
+                <div class="w-12 h-12 rounded-full border-4 border-white/30 border-t-rose-400 animate-spin"></div>
+                <span class="font-bold" data-i18n="loading_slides">投影片載入中…</span>
+            </div>
+
+            <button id="pdf-prev" onclick="changePage(-1)" aria-label="Previous page" class="absolute left-2 sm:left-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 text-gray-800 shadow-lg flex items-center justify-center hover:bg-white hover:scale-110 transition-all disabled:opacity-30 disabled:hover:scale-100">
+                <i data-lucide="chevron-left" class="w-7 h-7"></i>
+            </button>
+            <button id="pdf-next" onclick="changePage(1)" aria-label="Next page" class="absolute right-2 sm:right-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 text-gray-800 shadow-lg flex items-center justify-center hover:bg-white hover:scale-110 transition-all disabled:opacity-30 disabled:hover:scale-100">
+                <i data-lucide="chevron-right" class="w-7 h-7"></i>
+            </button>
         </div>
     </div>
 
@@ -228,39 +250,170 @@
 
     <script src="language.js"></script>
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
     <script>
-        function openPDF(pdfPath) {
-            const modal = document.getElementById('pdf-modal');
-            const frame = document.getElementById('pdf-frame');
-            
-            // 設定 iframe 的來源，#toolbar=0 可以隱藏部分瀏覽器預設的 PDF 工具列，讓畫面更乾淨
-            frame.src = pdfPath + "#toolbar=0&navpanes=0&scrollbar=0"; 
-            
-            // 顯示 Modal 並鎖定背景滾動
-            modal.classList.remove('hidden');
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        const pdfModal = document.getElementById('pdf-modal');
+        const pdfStage = document.getElementById('pdf-stage');
+        const pdfCanvas = document.getElementById('pdf-canvas');
+        const pdfLoading = document.getElementById('pdf-loading');
+
+        let pdfDoc = null;
+        let pdfPage = 1;
+        let pdfLoadingTask = null;
+        let pdfCloseTimer = null;
+        // 共用一個 worker，關掉某本時不會連 worker 一起被銷毀，避免下一本卡在載入中
+        const pdfWorker = new pdfjsLib.PDFWorker();
+
+        // iPhone Safari 不支援元素全螢幕，沒有就把按鈕藏起來
+        if (!(document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen)) {
+            document.getElementById('pdf-fullscreen-btn').classList.add('hidden');
+        }
+
+        async function openPDF(pdfPath) {
+            clearTimeout(pdfCloseTimer);
+            pdfModal.classList.remove('hidden');
+            pdfModal.classList.add('flex');
             document.body.style.overflow = 'hidden';
-            
-            // 加上微小的延遲來觸發淡入動畫
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-            }, 10);
+            setTimeout(() => pdfModal.classList.remove('opacity-0'), 10);
+
+            pdfDoc = null;
+            pdfPage = 1;
+            pdfCanvas.classList.add('invisible');
+            pdfLoading.classList.remove('hidden');
+            updateControls();
+
+            const task = pdfjsLib.getDocument({ url: pdfPath, worker: pdfWorker });
+            pdfLoadingTask = task;
+            try {
+                const doc = await task.promise;
+                if (task !== pdfLoadingTask) return; // 已關閉或改開別本
+                pdfDoc = doc;
+                updateControls();
+                renderPage();
+            } catch (err) {
+                if (task === pdfLoadingTask) {
+                    // 讀不到就退回瀏覽器內建的 PDF 檢視
+                    window.open(pdfPath, '_blank');
+                    closePDF();
+                }
+            }
+        }
+
+        // 一次只畫一頁；畫的途中又翻頁，就等這頁畫完再畫最新那頁（同一個 canvas 不能同時 render）
+        let pdfRendering = false;
+        let pdfRenderPending = false;
+
+        function renderPage() {
+            if (!pdfDoc) return;
+            if (pdfRendering) {
+                pdfRenderPending = true;
+                return;
+            }
+            drawPage();
+        }
+
+        async function drawPage() {
+            pdfRendering = true;
+            const doc = pdfDoc;
+            try {
+                const page = await doc.getPage(pdfPage);
+                const base = page.getViewport({ scale: 1 });
+                const style = getComputedStyle(pdfStage);
+                const maxW = pdfStage.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+                const maxH = pdfStage.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
+                const fit = Math.min(maxW / base.width, maxH / base.height);
+                const dpr = window.devicePixelRatio || 1;
+                const viewport = page.getViewport({ scale: fit * dpr });
+
+                pdfCanvas.width = viewport.width;
+                pdfCanvas.height = viewport.height;
+                pdfCanvas.style.width = (viewport.width / dpr) + 'px';
+                pdfCanvas.style.height = (viewport.height / dpr) + 'px';
+
+                await page.render({ canvasContext: pdfCanvas.getContext('2d'), viewport }).promise;
+                if (doc === pdfDoc) {
+                    pdfLoading.classList.add('hidden');
+                    pdfCanvas.classList.remove('invisible');
+                }
+            } catch (err) {
+                console.error(err);
+            } finally {
+                pdfRendering = false;
+                if (pdfRenderPending) {
+                    pdfRenderPending = false;
+                    renderPage();
+                }
+            }
+        }
+
+        function changePage(delta) {
+            if (!pdfDoc) return;
+            const next = pdfPage + delta;
+            if (next < 1 || next > pdfDoc.numPages) return;
+            pdfPage = next;
+            updateControls();
+            renderPage();
+        }
+
+        function updateControls() {
+            const total = pdfDoc ? pdfDoc.numPages : 0;
+            document.getElementById('pdf-counter').textContent = total ? pdfPage + ' / ' + total : '';
+            document.getElementById('pdf-prev').disabled = !total || pdfPage <= 1;
+            document.getElementById('pdf-next').disabled = !total || pdfPage >= total;
+        }
+
+        function isFullscreen() {
+            return !!(document.fullscreenElement || document.webkitFullscreenElement);
+        }
+
+        function toggleFullscreen() {
+            if (isFullscreen()) {
+                (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+            } else {
+                (pdfModal.requestFullscreen || pdfModal.webkitRequestFullscreen).call(pdfModal);
+            }
         }
 
         function closePDF() {
-            const modal = document.getElementById('pdf-modal');
-            const frame = document.getElementById('pdf-frame');
-            
-            // 觸發淡出動畫
-            modal.classList.add('opacity-0');
-            
-            // 等動畫結束後再隱藏並清空來源
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                frame.src = ""; 
-                document.body.style.overflow = 'auto'; // 恢復背景滾動
+            if (isFullscreen()) toggleFullscreen();
+            if (pdfLoadingTask) pdfLoadingTask.destroy();
+            pdfLoadingTask = null;
+            pdfDoc = null;
+            pdfModal.classList.add('opacity-0');
+            pdfCloseTimer = setTimeout(() => {
+                pdfModal.classList.add('hidden');
+                pdfModal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
             }, 300);
         }
+
+        document.addEventListener('keydown', (e) => {
+            if (pdfModal.classList.contains('hidden')) return;
+            if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); changePage(1); }
+            else if (e.key === 'ArrowLeft') changePage(-1);
+            else if (e.key === 'Escape' && !isFullscreen()) closePDF();
+        });
+
+        // 手機左右滑動翻頁
+        let touchStartX = null;
+        pdfStage.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        pdfStage.addEventListener('touchend', (e) => {
+            if (touchStartX === null) return;
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(dx) > 50) changePage(dx < 0 ? 1 : -1);
+            touchStartX = null;
+        });
+
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(renderPage, 150);
+        });
+        document.addEventListener('fullscreenchange', renderPage);
+        document.addEventListener('webkitfullscreenchange', renderPage);
     </script>
 </body>
 </html>

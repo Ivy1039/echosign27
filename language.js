@@ -201,6 +201,9 @@ const translations = {
         story_page_title:"親子手語故事屋",
         story_page_desc:"這裡有我們最新製作的雙語教案！這些簡報專為聽障家庭設計，每次能提供 1-2 小時的互動故事體驗，同時幫助孩子們學習基礎英文單字。",
         open_slides: "開啟投影片",
+        close_reading: "關閉閱讀",
+        fullscreen: "全螢幕",
+        loading_slides: "投影片載入中…",
 
         // --- CATES ---
         cates_p1: "Echo Sign 很榮幸能夠參與籌辦 2026 CATES 學生領袖會議，在這個一年一度的週末營隊，匯聚了來自全台各校 300–400 位有志成為領袖與改變者的學生。",
@@ -440,6 +443,9 @@ const translations = {
         story_page_title:"Treehouse Story Time Sessions",
         story_page_desc:"Here are our latest lesson plans! These slides are made and planned with care to deliver a 1-2 hour interactive story session for hearing impaired families and at the same time help children learn basic English vocabulary!",
         open_slides: "Open Slides",
+        close_reading: "Close",
+        fullscreen: "Full Screen",
+        loading_slides: "Loading slides…",
 
         // --- CATES ---
         cates_p1: "EchoSign was proud to collaborate in organizing the 2026 CATES Student Leadership Conference, an annual weekend retreat bringing together 300–400 aspiring student leaders and changemakers from schools across Taiwan.",
