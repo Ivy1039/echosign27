@@ -34,6 +34,7 @@ const translations = {
         impact_3: "募集到的資金 (美金)",
         impact_4: "企業/組織合作夥伴",
         impact_5: "發放給聽障社群的手語卡套組",
+        impact_story_title: "親子手語故事屋",
 
         about_title: "打破「隱形泡泡」的起點",
         about_link: "閱讀更多創辦故事",
@@ -225,6 +226,7 @@ const translations = {
         step2_desc: "送出申請後請耐心等待，我們將在 2-3 個工作天內與你聯絡。",
         step3_title: "Step 3: 開始行動",
         step3_desc: "這是一個自我成長、回饋社會的絕佳機會，讓我們一起 Echo 愛，為聾聽共融而努力！ :)",
+        step3_photo_caption: "Joseph 與 Jasmine 在 DIS 秋季園遊會為 EchoSign 募款！",
         volunteer_contact: "如有任何疑問，請聯繫：Echosignn29@gmail.com"
     },
     en: {
@@ -234,7 +236,7 @@ const translations = {
         nav_volunteer: "Volunteer Today",
         nav_donate: "Donate",
         nav_about:"About Us",
-        nav_timeline: "Our Story",
+        nav_timeline: "Timeline",
         nav_team: "Our Team",
         nav_impact:"Impacts",
         nav_collaborators:"Our Collaborators",
@@ -262,6 +264,7 @@ const translations = {
         impact_3: "USD Raised by our community to fund events and future programs", 
         impact_4: "Company / organization partnerships", 
         impact_5: "Sign card sets given out to the hearing imapired community",
+        impact_story_title: "Tree House Story Time Sessions",
 
         about_title: "The Beginning of Breaking the 'Invisible Bubble'",
         about_link: "Read Full Story",
@@ -462,6 +465,7 @@ const translations = {
         step2_desc: "After submitting your application, please wait 2-3 business days for us to contact you.",
         step3_title: "Step 3: Take Action",
         step3_desc: "This is a great opportunity for self-growth and giving back. Let's echo love together for a more inclusive world! :)",
+        step3_photo_caption: "Joseph and Jasmine fundraising for EchoSign at the DIS fall fair!",
         volunteer_contact: "For any inquiries, please contact: Echosignn29@gmail.com",
     }
 };

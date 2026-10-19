@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Cards | Echo Sign</title>
+    <link rel="icon" href="image/echosign_logo_circle.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="antialiased overflow-x-hidden lang-zh bg-rose-50">
+
+    <div id="header-placeholder"></div>
+
+    <main class="relative overflow-hidden">
+        <div class="absolute top-40 -right-20 w-96 h-96 bg-rose-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
+        <div class="absolute top-[60rem] -left-20 w-96 h-96 bg-orange-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60"></div>
+
+        <!-- Hero -->
+        <section class="pt-28 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-7xl mx-auto relative rounded-[2rem] overflow-hidden shadow-2xl">
+                <img src="image/SignCards/S__5013521_0.jpg" alt="Sign Cards" class="w-full h-[26rem] md:h-[34rem] object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+                    <span class="inline-block bg-white/90 text-rose-500 text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full mb-4">Our Programs</span>
+                    <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight" data-i18n="nav_card_publish">嬰幼兒手語溝通圖卡</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story -->
+        <section class="py-20 md:py-28 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-6xl mx-auto space-y-20 md:space-y-28">
+
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="proj_2_desc"></p>
+                    <img src="image/SignCards/S__5013520_0.jpg" alt="Sign Cards" onclick="openPhoto(this.src)" class="w-full max-w-sm mx-auto aspect-square object-cover rounded-3xl shadow-xl cursor-zoom-in">
+                </div>
+
+                <div class="grid md:grid-cols-5 gap-6 md:gap-10 items-center">
+                    <img src="image/SignCards/S__5013519_0.jpg" alt="Sign Cards filming" onclick="openPhoto(this.src)" class="md:col-span-3 w-full aspect-[3/2] object-cover rounded-3xl shadow-xl cursor-zoom-in">
+                    <div class="md:col-span-2 grid grid-cols-2 gap-4">
+                        <img src="image/SignCards/S__5013524_0.jpg" alt="Sign Cards filming" onclick="openPhoto(this.src)" class="w-full aspect-[2/3] object-cover rounded-3xl shadow-xl cursor-zoom-in">
+                        <img src="image/SignCards/S__5013526_0.jpg" alt="Sign Cards" onclick="openPhoto(this.src)" class="w-full aspect-[2/3] object-cover rounded-3xl shadow-xl cursor-zoom-in mt-10">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <div class="order-2 md:order-1 grid grid-cols-2 gap-4">
+                        <img src="image/SignCards/S__5013523_0.jpg" alt="Sign Cards filming" onclick="openPhoto(this.src)" class="col-span-2 w-full aspect-[3/2] object-cover rounded-3xl shadow-xl cursor-zoom-in">
+                        <img src="image/SignCards/S__5013525_0.jpg" alt="Sign Cards" onclick="openPhoto(this.src)" class="w-full aspect-square object-cover rounded-2xl shadow-lg cursor-zoom-in">
+                        <img src="image/SignCards/S__5013522_0.jpg" alt="Sign Cards" onclick="openPhoto(this.src)" class="w-full aspect-square object-cover rounded-2xl shadow-lg cursor-zoom-in">
+                    </div>
+                    <img src="image/SignCards/S__5013528_0.jpg" alt="Sign Card" onclick="openPhoto(this.src)" class="order-1 md:order-2 w-full max-w-sm mx-auto aspect-[4/5] object-cover rounded-3xl shadow-xl cursor-zoom-in md:rotate-2">
+                </div>
+
+                <div class="grid md:grid-cols-5 gap-6 md:gap-10 items-center">
+                    <div class="md:col-span-2 grid grid-cols-2 gap-4">
+                        <img src="image/SignCards/S__5013527_0.jpg" alt="Sign Cards" onclick="openPhoto(this.src)" class="w-full aspect-[2/3] object-cover rounded-3xl shadow-xl cursor-zoom-in mt-10">
+                        <img src="image/SignCards/S__5013530_0.jpg" alt="Sign Cards filming" onclick="openPhoto(this.src)" class="w-full aspect-[2/3] object-cover rounded-3xl shadow-xl cursor-zoom-in">
+                    </div>
+                    <img src="image/SignCards/S__5013531_0.jpg" alt="Sign Cards filming" onclick="openPhoto(this.src)" class="md:col-span-3 w-full aspect-[3/2] object-cover rounded-3xl shadow-xl cursor-zoom-in">
+                </div>
+
+                <div class="grid md:grid-cols-5 gap-6 md:gap-10 items-center">
+                    <img src="image/SignCards/S__5013532_0.jpg" alt="Sign Cards" onclick="openPhoto(this.src)" class="md:col-span-3 w-full aspect-[4/3] object-cover rounded-3xl shadow-xl cursor-zoom-in">
+                    <img src="image/SignCards/S__5013533_0.jpg" alt="Sign Cards" onclick="openPhoto(this.src)" class="md:col-span-2 w-full max-w-sm mx-auto aspect-[3/4] object-cover rounded-3xl shadow-xl cursor-zoom-in md:-rotate-2">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="photo-modal" onclick="closePhoto()" class="fixed inset-0 z-[100] bg-black/80 hidden flex items-center justify-center backdrop-blur-md p-4 cursor-zoom-out">
+        <img id="photo-full" src="" alt="Sign Cards" class="max-w-full max-h-[90vh] rounded-2xl shadow-2xl">
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="language.js"></script>
+    <script src="main.js"></script>
+    <script>
+        function openPhoto(src) {
+            document.getElementById('photo-full').src = src;
+            document.getElementById('photo-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closePhoto() {
+            document.getElementById('photo-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
