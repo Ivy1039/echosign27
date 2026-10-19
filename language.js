@@ -34,7 +34,6 @@ const translations = {
         impact_3: "募集到的資金 (美金)",
         impact_4: "企業/組織合作夥伴",
         impact_5: "發放給聽障社群的手語卡套組",
-        impact_story_title: "親子手語故事屋",
 
         about_title: "打破「隱形泡泡」的起點",
         about_link: "閱讀更多創辦故事",
@@ -267,7 +266,6 @@ const translations = {
         impact_3: "USD Raised by our community to fund events and future programs", 
         impact_4: "Company / organization partnerships", 
         impact_5: "Sign card sets given out to the hearing imapired community",
-        impact_story_title: "Tree House Story Time Sessions",
 
         about_title: "The Beginning of Breaking the 'Invisible Bubble'",
         about_link: "Read Full Story",
