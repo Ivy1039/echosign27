@@ -13,37 +13,35 @@
 
     <div id="header-placeholder"></div>
     
-    <section class="relative min-h-[85vh] lg:min-h-screen flex items-center justify-center overflow-hidden z-10 pt-32 pb-20 bg-orange-50">
-        
-        <!-- <img src="image/S__2211974.jpg" alt="Megan Chen - Founder" class="absolute inset-0 w-full h-full object-cover mt-20 translate-x-[20%] z-0">
-        <div class="absolute inset-0 bg-orange-50 z-10" style="-webkit-mask-image: linear-gradient(to right, white 50%, transparent 100%); mask-image: linear-gradient(to right, white 50%, transparent 100%);"></div> -->
+    <section class="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden z-10 pt-32 pb-20">
 
-        <img src="image/S__2211974.jpg" alt="Megan Chen - Founder" 
-             class="absolute inset-0 w-full h-full object-cover mt-20 translate-x-[25%] z-0"
-             style="-webkit-mask-image: linear-gradient(to right, transparent 10%, white 70%); mask-image: linear-gradient(to right, transparent 10%, white 70%);">
+        <!-- 滿版背景圖 + 色調遮罩，文字疊在上面 -->
+        <img src="image/S__2211974.jpg" alt="Megan Chen - Founder" class="absolute inset-0 w-full h-full object-cover object-top z-0">
+        <div class="absolute inset-0 z-10 bg-rose-950/45"></div>
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-rose-950/70 via-rose-900/30 to-transparent"></div>
 
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative z-20">
-            <div class="max-w-2xl space-y-8 text-center lg:text-left mx-auto lg:mx-0 pt-20">
+            <div class="max-w-3xl space-y-8 text-center lg:text-left mx-auto lg:mx-0 pt-10">
 
-                <div class="inline-flex items-center px-4 py-2 rounded-full bg-white border border-rose-100 shadow-sm mb-4">
-                    <span class="flex h-2 w-2 rounded-full bg-rose-500 mr-2"></span>
-                    <span class="text-sm text-gray-600 font-medium" data-i18n="hero_badge">青年領軍的聾聽共融計畫</span>
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/15 border border-white/30 backdrop-blur-sm mb-4">
+                    <span class="flex h-2 w-2 rounded-full bg-rose-300 mr-2"></span>
+                    <span class="text-sm text-white font-medium" data-i18n="hero_badge">青年領軍的聾聽共融計畫</span>
                 </div>
 
-                <h1 class="text-5xl lg:text-6xl font-bold leading-tight text-gray-800">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-lg">
                     <span data-i18n="hero_title_1">讓每一份表達</span><br>
-                    <span data-i18n="hero_title_2">都被</span><span class="gradient-text" data-i18n="hero_title_highlight">溫柔聽見</span>
+                    <span data-i18n="hero_title_2">都被</span><span class="text-rose-200" data-i18n="hero_title_highlight">溫柔聽見</span>
                 </h1>
 
-                <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0" data-i18n="hero_desc">
+                <p class="text-xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 drop-shadow" data-i18n="hero_desc">
                     Echo Sign 致力於打破溝通隔閡。我們透過手語圖卡與繪本，搭建聾聽之間的橋樑，創造一個無障礙的溫暖世界。
                 </p>
-                
+
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="donate.html" class="gradient-btn text-white px-8 py-4 rounded-full text-lg font-medium shadow-lg text-center">
+                    <a href="donate.html" class="px-8 py-4 rounded-full text-lg font-medium text-rose-600 bg-white hover:bg-rose-50 transition-all shadow-lg text-center">
                         <span data-i18n="hero_cta_primary">支持我們</span>
                     </a>
-                    <a href="#our_story" class="px-8 py-4 rounded-full text-lg font-medium text-gray-600 bg-white border border-gray-200 hover:border-rose-300 hover:text-rose-500 transition-all shadow-sm text-center">
+                    <a href="#our_story" class="px-8 py-4 rounded-full text-lg font-medium text-white border-2 border-white hover:bg-white/15 transition-all text-center">
                         <span data-i18n="hero_cta_secondary">了解更多</span>
                     </a>
                 </div>
